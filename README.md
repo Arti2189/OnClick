@@ -1,0 +1,2 @@
+# OnClick
+This product displays miscellaneous business information available in USA. People can search business on the basis of State, City,Name of the Business and Categories and help them find a favourable place to visit according to their needs. It provides all required information like ratings, reviews, address along with the location on Google Map of the business where the business do not have their own website.
