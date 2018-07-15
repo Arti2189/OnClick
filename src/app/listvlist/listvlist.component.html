@@ -1,0 +1,226 @@
+<main id="listar-main" class="listar-main listar-haslayout">
+  <!-- 
+     ***************************
+     Banner Starts Here
+      *****************************
+  -->
+  	<div class="listar-listingbanner">
+        <div class="listar-parallaxcolor listar-innerbannerparallaxcolor">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="listar-innerbannercontent">
+                  <div class="listar-pagetitle">
+                    <h1>Listing</h1>
+                  </div>
+                  <ol class="listar-breadcrumb">
+                    <li><a routerLink="../banner" >Home</a></li>
+                    <li class="listar-active"><span>Listing</span></li>
+                  </ol>
+                </div>
+               
+              </div>
+            </div> 
+          </div>
+          <div class="container-1">
+              <span class="icon"><i class="fa fa-search"></i></span>
+              <input type="search" id="search" placeholder="Search..." [(ngModel)]="filter" />
+          </div>
+       
+        </div>
+      </div>
+    <!--
+      **********************************
+      Banner Ends Here
+      **********************************
+    -->  
+<!--
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left" >
+   <div class="input-group">
+     <div class="row">
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+  <div class="search_keywords">
+  <label for="search_keywords">Keywords</label>
+  <input type="text" name="keywords" id="keywords" placeholder="search Keywords" value="" />
+  </div>
+  </div>
+   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+  <div class="search_keywords">
+  <label for="search_keywords"><span class="glyphicon glyphicon-map-marker"></span>State</label>
+  <input type="text" name="state" id="state" placeholder="search state" value="" />
+  </div>
+  </div>
+  <br>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+  <div class="search_keywords">
+  <label for="search_keywords"><span class="glyphicon glyphicon-map-marker"></span>City</label>
+  <input type="text" name="city" id="city" placeholder="search city" value="" />
+  </div>
+  </div>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+  <div class="select-categories">
+  <div class="search_categories">
+  <label for="search_categories">Category</label>
+  <select name='search_categories[]' id='search_categories' class='job-manager-category-dropdown ' data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options'>
+  <option value="">All categories</option> <option class="level-0" value="125">Arts &amp; Entertainment</option>
+  <option class="level-1" value="126">&nbsp;&nbsp;&nbsp;Art Gallery</option>
+  <option class="level-1" value="153">&nbsp;&nbsp;&nbsp;Movie</option>
+  <option class="level-0" value="176">Educations</option>
+  <option class="level-0" value="149">Food</option>
+  <option class="level-1" value="154">&nbsp;&nbsp;&nbsp;Coffee</option>
+  <option class="level-1" value="156">&nbsp;&nbsp;&nbsp;Restaurant</option>
+  <option class="level-1" value="155">&nbsp;&nbsp;&nbsp;Wine &amp; Beers</option>
+  <option class="level-0" value="150">Hotel</option>
+  <option class="level-0" value="152">Jobs</option>
+  <option class="level-0" value="175">Shoppings</option>
+  <option class="level-0" value="151">Travels</option>
+  </select>
+  </div>
+  </div>
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary">Search</button>
+  </div>
+    </div>
+    </div>-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+              <div class="listar-themeposts listar-placesposts listar-listview">
+                <fieldset>
+                  <div class="listar-select">
+                  Order By:
+                    <select>
+                      <option>Default</option>
+                      <option>Ascending</option>
+                      <option>Descending</option>
+                    </select>
+                  </div>
+                  <div class="listar-rightbox">
+                    <ul class="listar-views">
+                    <!--	<li><a href="listingv2.html"><i class="icon-grid"></i></a></li>
+                      <li class="listar-active"><a href="listingvlist.html"><i class="icon-icons152"></i></a></li>-->
+                     <li class="listar-active"> <a routerLink="../listvlist"><i class="fa fa-list"></i></a> </li> 
+                     <li> <a routerLink="../listgrid"><i class="fa fa-th-large"></i></a></li> 
+                      <li><a href="map.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                </fieldset> 
+               
+                <div *ngFor="let user of users|orderBy:key:reverse|filter:filter|paginate:{itemsPerPage:5,currentPage:p}" class="listar-themepost listar-placespost" >
+                  
+                  <figure class="listar-featuredimg"><a routerLink="/details/{{user.business_id}}"><img src="assets/images/list/{{user.Images}}" alt="image description" class="mCS_img_loaded"></a></figure>
+
+                  <div class="listar-postcontent">
+                    <h3><a routerLink="/details/{{user.business_id}}">{{user.name}}</a></h3>
+                    <div class="listar-description">
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod Aenean sollicitudin it conseibh id elit</p>
+                    </div>
+                    <div class="listar-reviewcategory">
+                      <div class="listar-review">
+                        <span class="listar-stars"><span></span></span>
+                        <em>{{user.review_count}} reviews</em>
+                      </div>
+                      <a href="javascript:void(0);" class="listar-category">
+                        <i class="icon-nightlife"></i>
+                        <span>{{user.categories}}</span>
+                      </a>
+                    </div>
+                    <div class="listar-themepostfoot">
+                      <a class="listar-location" href="javascript:void(0);">
+                        <i class="icon-icons74"></i>
+                        <em>{{user.city}}</em>
+                      </a>
+                      <div class="listar-postbtns">
+                        
+                        <a class="listar-btnquickinfo" href="#" data-toggle="modal" data-target=".listar-placequickview"><i class="icon-expand"></i></a>
+                        <a class="listar-btnquickinfo" href="javascript:void(0);"><i class="icon-heart2"></i></a>
+                        <div class="listar-btnquickinfo">
+                          <div class="listar-shareicons">
+                            <a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                            <a href="javascript:void(0);"><i class="fa fa-pinterest-p"></i></a>
+                          </div>
+                          <a class="listar-btnshare" href="javascript:void(0);">
+                            <i class="icon-share3"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <nav class="listar-pagination">
+                
+                    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                
+                </nav>
+              
+              </div>
+            </div>
+  </main>
+  <!--************************************
+      Theme Modal Box Starts
+  *************************************-->
+
+  <div class="modal fade listar-placequickview" tabindex="-1" role="dialog">
+    <div class="modal-dialog listar-modaldialog" role="document">
+      <div class="modal-content listar-modalcontent">
+        <div class="listar-themepost listar-placespost">
+          <span class="listar-btnclosequickview" data-toggle="modal" data-target=".listar-placequickview">X</span>
+          <figure class="listar-featuredimg" data-vide-bg="poster: assets/images/post/img-18.jpg" data-vide-options="position: 50% 50%">
+            <span class="listar-contactnumber">
+              <i class="icon-"><img src="assets/images/icons/icon-03.png" alt="image description"></i>
+              <em> + 7890 456 133</em>
+            </span>
+          </figure>
+          <div class="listar-postcontent">
+            <h3><a href="javascript:void(0);">Serena Hotel</a><i class="icon-checkmark listar-postverified listar-themetooltip" data-toggle="tooltip" data-placement="top" title="Verified"></i></h3>
+            <div class="listar-description">
+              <p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit Nam in mauris quis libero sodales eleifend amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus</p>
+            </div>
+            <ul class="listar-listfeatures">
+              <li>Pets allowed</li>
+              <li>Kitchen</li>
+              <li>Internet</li>
+              <li>Suitable for events</li>
+              <li>Gym</li>
+              <li>Dryer</li>
+              <li>Hot tub</li>
+              <li>Family/kid friendly</li>
+              <li>Wireless Internet</li>
+            </ul>
+            <div class="listar-reviewcategory">
+              <div class="listar-review">
+                <span class="listar-stars"><span></span></span>
+                <em>(3 Review)</em>
+              </div>
+              <a href="javascript:void(0);" class="listar-category">
+                <i class="icon-tourism"></i>
+                <span>Hotel</span>
+              </a>
+            </div>
+            <div class="listar-themepostfoot">
+              <span class="listar-openinghours">
+                <i class="icon-alarmclock2"></i>
+                <em>Today <span class="listar-greenthemecolor">Open Now</span> 10:00 AM - 5:00 PM</em>
+              </span>
+              <div class="listar-postbtns">
+                <a class="listar-btnquickinfo listar-liked" href="javascript:void(0);"><i class="icon-heart2"></i></a>
+                <div class="listar-btnquickinfo">
+                  <div class="listar-shareicons">
+                    <a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                    <a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                    <a href="javascript:void(0);"><i class="fa fa-pinterest-p"></i></a>
+                  </div>
+                  <a class="listar-btnshare" href="javascript:void(0);">
+                    <i class="icon-share3"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--************************************
+      Theme Modal Box End
+  *************************************-->

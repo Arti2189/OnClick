@@ -1,0 +1,154 @@
+  <header id="listar-header" class="listar-header listar-fixedheader listar-haslayout">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <strong class="listar-logo"><a href="index-2.html"><img src="assets/images/logod.png" alt="company logo here"></a></strong>
+          <nav class="listar-addnav">
+            <ul>
+              <li>
+                <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="#listar-loginsingup">
+                  <i class="icon-smiling-face"></i>
+                  <span>Join Now</span>
+                </a>
+              </li>
+              <li>
+                <div class="dropdown listar-themedropdown">
+                  <a id="listar-cartdropdown" class="listar-btn listar-btnround listar-btncartdropdown" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <em>2</em>
+                    <i class="icon-icons240"></i>
+                  </a>
+                  <div class="dropdown-menu listar-themedropdownmenu listar-minicart" aria-labelledby="listar-cartdropdown">
+                    <div class="listar-cartitem">
+                      <figure><a href="javascript:void(0);"><img src="assets/images/cart/img-01.jpg" alt="image description"></a></figure>
+                      <div class="listar-iteminfo">
+                        <span>Orange Juice</span>
+                        <span>2 x $15</span>
+                        <a class="listar-btndelate icon-cross" href="javascript:void(0);"></a>
+                      </div>
+                    </div>
+                    <div class="listar-cartitem">
+                      <figure><a href="javascript:void(0);"><img src="assets/images/cart/img-01.jpg" alt="image description"></a></figure>
+                      <div class="listar-iteminfo">
+                        <span>Orange Juice</span>
+                        <span>2 x $15</span>
+                        <a class="listar-btndelate icon-cross" href="javascript:void(0);"></a>
+                      </div>
+                    </div>
+                    <div class="listar-cartitem listar-totalarea">
+                      <span>Order Total:</span>
+                      <span>$60.00</span>
+                    </div>
+                    <a class="listar-btn listar-btngreen listar-btn-lg" href="javascript:void(0);">View Bag &amp; Checkout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <nav id="listar-nav" class="listar-nav">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#listar-navigation" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="listar-navigation" class="collapse navbar-collapse listar-navigation">
+              <ul>
+                <li><a routerLink="banner" >Home</a></li>
+                <li><a routerLink="listgrid">Explore</a></li> 
+                <li><a routerLink="blog">Blog</a></li> 
+               
+                <li><a href="contactus.html">Contact Us</a></li>
+              
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!--************************************
+      Login Singup Start
+  *************************************-->
+  <div id="listar-loginsingup" class="listar-loginsingup">
+    <button type="button" class="listar-btnclose">x</button>
+    <figure class="listar-loginsingupimg" data-vide-bg="poster: images/bgjoin.jpg" data-vide-options="position: 50% 50%"></figure>
+    <div class="listar-contentarea">
+      <div class="listar-themescrollbar">
+        <div class="listar-logincontent">
+          <div class="listar-themetabs">
+            <ul class="listar-tabnavloginregistered" role="tablist">
+              <li role="presentation" class="active"><a href="#listar-loging" data-toggle="tab">Log in</a></li>
+              <li role="presentation"><a href="#listar-register" data-toggle="tab">Register</a></li>
+            </ul>
+            <div class="container">
+              <div role="tabpanel" class="tab-pane active " id="listar-loging">
+                <form class="listar-formtheme listar-formlogin">
+                  <fieldset>
+                    <div class="form-group listar-inputwithicon">
+                      <i class="icon-profile-male"></i>
+                      <input type="text" name="username" class="form-control" placeholder="Username Or Email">
+                    </div>
+                    <div class="form-group listar-inputwithicon">
+                      <i class="icon-icons208"></i>
+                      <input type="password" name="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="listar-checkbox">
+                        <input type="checkbox" name="remember" id="rememberpass2">
+                        <label for="rememberpass2">Remember me</label>
+                      </div>
+                      <span><a href="#">Lost your Password?</a></span>
+                    </div>
+                    <button class="listar-btn listar-btngreen">Register</button>
+                  </fieldset>
+                </form>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="listar-register">
+                <form class="listar-formtheme listar-formlogin">
+                  <fieldset>
+                    <div class="form-group listar-inputwithicon">
+                      <i class="icon-profile-male"></i>
+                      <input type="text" name="username" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="form-group listar-inputwithicon">
+                      <i class="icon-icons208"></i>
+                      <input type="email" name="emailaddress" class="form-control" placeholder="Email Address">
+                    </div>
+                    <div class="form-group listar-inputwithicon">
+                      <i class="icon-lock-stripes"></i>
+                      <input type="password" name="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group listar-inputwithicon">
+                      <i class="icon-lock-stripes"></i>
+                      <input type="password" name="confirmpassword" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="listar-checkbox">
+                        <input type="checkbox" name="remember" id="rememberpass">
+                        <label for="rememberpass">Remember me</label>
+                      </div>
+                      <span><a href="#">Lost your Password?</a></span>
+                    </div>
+                    <button class="listar-btn listar-btngreen">login</button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            </div>
+          <div class="listar-shareor"><span>or</span></div>
+          <div class="listar-signupwith">
+            <h2>Sign in With...</h2>
+            <ul class="listar-signinloginwithsocialaccount">
+              <li class="listar-facebook"><a href="javascript:void(0);"><i class="icon-facebook-1"></i><span>Facebook</span></a></li>
+              <li class="listar-twitter"><a href="javascript:void(0);"><i class="icon-twitter-1"></i><span>Twitter</span></a></li>
+              <li class="listar-googleplus"><a href="javascript:void(0);"><i class="icon-google4"></i><span>Google +</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
