@@ -1748,7 +1748,7 @@ body.listar-hidescroll{overflow: hidden;}
 .listar-featuredimg img{
 	z-index: 1;
 	width: 100%;
-	height: auto;
+	height: 200px;
 	display: block;
 	position: relative;
 }
@@ -3674,7 +3674,7 @@ body.listar-hidescroll{overflow: hidden;}
 }
 .listar-listview .listar-featuredimg a img{
 	width: -webkit-fill-available;
-	height: auto;
+	height: 185px;
 	max-width: none;
 }
 
