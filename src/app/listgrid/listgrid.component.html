@@ -43,11 +43,20 @@
 									
                     <div class="listar-select">
                       Order By:
-                        <select>
+                      <!--  <select>
                           <option>Default</option>
                           <option>Ascending</option>
                           <option>Descending</option>
-                        </select>
+												</select>-->
+												<div class="btn btn-primary" (click)="sort('review_count')" style="margin-right:3px">
+													Reviews
+										</div> 
+										<div class="btn btn-primary" (click)="sort('stars')" style="margin-right:3px">
+												Ratings
+									</div> 
+									<div class="btn btn-primary" (click)="sort('is_open')" >
+											Is Open
+								</div>
                       </div>
                       <div class="listar-rightbox">
 											<ul class="listar-views">
