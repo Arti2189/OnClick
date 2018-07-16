@@ -35,7 +35,105 @@
     **********************************
     Banner Ends Here
     **********************************
-  -->  
+	-->  
+	<!--
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left" >
+		<div class="input-group">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+	 <div class="search_keywords">
+	 <label for="search_keywords">Keywords</label>
+	 <input type="text" name="keywords" id="keywords" placeholder="search Keywords" value="" />
+	 </div>
+	 </div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+	 <div class="search_keywords">
+	 <label for="search_state"><span class="glyphicon glyphicon-map-marker"></span>State</label>
+	 <input type="text" name="state" id="state" placeholder="search state" value="" />
+	 </div>
+	 </div>
+	 <br>
+		 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+	 <div class="search_keywords">
+	 <label for="search_city"><span class="glyphicon glyphicon-map-marker"></span>City</label>
+	 <input type="text" name="city" id="city" placeholder="search city" value="" />
+	 </div>
+	 </div>
+
+	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+		<div class="search_keywords">
+		<label for="search_categories"><span class="glyphicon glyphicon-map-marker"></span>Categories</label>
+		<input type="text" name="categories" id="categories" placeholder="search city" value="" />
+		</div>
+		</div>
+	 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+	 <div class="select-categories">
+	 <div class="search_categories">
+	 <label for="search_categories">Filter</label>
+	 <select name='fil[]' id='search_categories' class='job-manager-category-dropdown ' data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options'>
+	 <option value="">All categories</option> <option class="level-0" value="125">Arts &amp; Entertainment</option>
+	 <option class="level-1" value="126">&nbsp;&nbsp;&nbsp;Art Gallery</option>
+	 <option class="level-1" value="153">&nbsp;&nbsp;&nbsp;Movie</option>
+	 <option class="level-0" value="176">Educations</option>
+	 <option class="level-0" value="149">Food</option>
+	 <option class="level-1" value="154">&nbsp;&nbsp;&nbsp;Coffee</option>
+	 <option class="level-1" value="156">&nbsp;&nbsp;&nbsp;Restaurant</option>
+	 <option class="level-1" value="155">&nbsp;&nbsp;&nbsp;Wine &amp; Beers</option>
+	 <option class="level-0" value="150">Hotel</option>
+	 <option class="level-0" value="152">Jobs</option>
+	 <option class="level-0" value="175">Shoppings</option>
+	 <option class="level-0" value="151">Travels</option>
+	 </select>
+	 </div>
+	 </div>
+	 </div>
+	 <br>
+	 <button type="button" class="btn btn-primary">Search</button>
+	 </div>
+		 </div>
+		 </div> -->
+
+		 <div class="widget clearfix">
+			<div class="widget-heading">
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="widget-body">
+				<form class="row" #searchForm="ngForm" (ngSubmit)="searchData(searchForm)">
+					<div class="col-xs-12 col-md-6 col-lg-1"></div>
+					<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+						<div class="form-group">
+						<input type="text" name="keyword" class="form-control" id="Keyword" placeholder="Enter Keyword" ngModel> </div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+						<div class="form-group">
+						<input type="text" name="state" class="form-control" id="state" placeholder="Enter State" ngModel> </div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+						<div class="form-group">
+						<input type="text" name="city" class="form-control" id="city" placeholder="Enter City" ngModel> </div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+						<div class="form-group">
+						<input type="text" name="categories" class="form-control" id="categories" placeholder="Enter categories" ngModel> </div>
+					</div>
+				
+					<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+						<div class="form-group">
+							<select class="form-control" id="exampleSelect1" ngValue="op1" (change)="getValue($event.target.value)">
+								<option value="1" name="op1">Filter</option>
+								<option value="2" name="op1">Low To High</option>
+								<option value="3" name="op1">High To Low</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-2"> <input type="submit" value="Search" class="btn theme-btn  btn-block"></div>
+
+				</form>
+			</div>
+		</div>
+
+
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
 						<div class="row">	
 								<div class="listar-themeposts listar-placesposts listar-gridview">

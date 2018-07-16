@@ -249,6 +249,31 @@ address { font-style: italic; }
 /* =============================================
 			Theme Custom Select
 ============================================= */
+
+/*___________________________________________-
+	  widget search bar 
+ ____________________________________________*/
+
+ .widget {
+    /*border: 1px solid #eaebeb;*/
+    background: #113233;
+    border-radius: 3px;
+	margin-bottom: 20px;
+	
+}
+
+.widget-heading {
+    padding: 15px;
+    color: #fff;
+    border-radius: 3px;
+    border-bottom: 1px solid #eaebeb;
+}
+
+.widget-body {
+    padding: 40px;
+}
+
+ /*****************************************/
 .listar-select {
 	color:#666;
 	float:left;
