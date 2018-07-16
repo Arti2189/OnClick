@@ -1,109 +1,109 @@
 <main id="listar-main" class="listar-main listar-haslayout">
- <!--  <div id="listar-locationmap" class="listar-locationmap"></div> -->
- 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div id="listar-content" class="listar-content">
-          <div class="listar-contactusarea">
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 pull-left">
-              <div class="row">
-                <form class="listar-formtheme listar-formcontactus" #contactForm="ngForm" (ngSubmit)="insertContact(contactForm)">
-                  <fieldset>
-                    <h2>Contact Form</h2>
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <div class="form-group">
-                          <input type="text" name="yourName" class="form-control" placeholder="Your Name" [(ngModel)]="yourName">
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <div class="form-group">
-                          <input type="email" name="Email" class="form-control" placeholder="Email Address" [(ngModel)]="Email">
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group">
-                          <input type="text" name="Subject" class="form-control" placeholder="Subject" [(ngModel)]="Subject">
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group">
-                          <textarea class="form-control" name="Message" placeholder="Message" [(ngModel)]="Message"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <button class="listar-btn listar-btngreen" type="submit">Send Message</button>
-                      </div>
-                    </div>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 pull-right">
-              <div class="row">
-                <div class="listar-contactinfo">
-                  <h2>Get in Touch</h2>
-                  <div class="listar-description">
-                    <p>For any query,feel free to contact</p>
-                  </div>
-                  <ul class="listar-contactinfolist">
-                    <li>
-                      <i class="icon-">
-                        <img src="assets/images/icons/icon-03.png" alt="image description">
-                      </i>
-                      <span>9425442189</span>
-                    </li>
-                    <li>
-                      <i class="icon-icons208"></i>
-                      <span>
-                        <a href="">artidhanotiya2189@gmail.com</a>
-                      </span>
-                    </li>
-                    <li>
-                      <i class="icon-world"></i>
-                      <span>
-                        <a href="www.listingstar.html" target="_blank">artidhanotiya2189@gmail.com</a>
-                      </span>
-                    </li>
-                    <li>
-                      <i class="icon-icons74"></i>
-                      <span>LTI Mahape, Navi Mumbai</span>
-                    </li>
-                  </ul>
-                  <ul class="listar-socialicons listar-socialiconsborder">
-                    <li class="listar-facebook">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li class="listar-twitter">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li class="listar-googleplus">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-google-plus"></i>
-                      </a>
-                    </li>
-                    <li class="listar-linkedin">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-linkedin"></i>
-                      </a>
-                    </li>
-                    <li class="listar-instagram">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
+  <!--  <div id="listar-locationmap" class="listar-locationmap"></div> -->
+  
+   <div class="container">
+     <div class="row">
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+         <div id="listar-content" class="listar-content">
+           <div class="listar-contactusarea">
+             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 pull-left">
+               <div class="row">
+                 <form class="listar-formtheme listar-formcontactus" #contactForm="ngForm"  (ngSubmit)="insertContact(contactForm)">
+                   <fieldset>
+                     <h2>Contact Form</h2>
+                     <div class="row">
+                       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                         <div class="form-group">
+                           <input type="text" name="yourName" class="form-control" placeholder="Your Name" [(ngModel)]="yourName" class="form-control" required />
+                         </div>
+                       </div>
+                       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                         <div class="form-group">
+                           <input type="email" name="Email" class="form-control" placeholder="Email Address" [(ngModel)]="Email" class="form-control" required />
+                         </div>
+                       </div>
+                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="form-group">
+                           <input type="text" name="Subject" class="form-control" placeholder="Subject" [(ngModel)]="Subject" class="form-control" required />
+                         </div>
+                       </div>
+                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <div class="form-group">
+                           <textarea class="form-control" name="Message" placeholder="Message" [(ngModel)]="Message" class="form-control" required ></textarea>
+                         </div>
+                       </div>
+                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                         <button class="listar-btn listar-btngreen" type="submit">Send Message</button>
+                       </div>
+                     </div>
+                   </fieldset>
+                 </form>
+               </div>
+             </div>
+             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 pull-right">
+               <div class="row">
+                 <div class="listar-contactinfo">
+                   <h2>Get in Touch</h2>
+                   <div class="listar-description">
+                     <p>For any query,feel free to contact</p>
+                   </div>
+                   <ul class="listar-contactinfolist">
+                     <li>
+                       <i class="icon-">
+                         <img src="assets/images/icons/icon-03.png" alt="image description">
+                       </i>
+                       <span>9425442189</span>
+                     </li>
+                     <li>
+                       <i class="icon-icons208"></i>
+                       <span>
+                         <a href="">artidhanotiya2189@gmail.com</a>
+                       </span>
+                     </li>
+                     <li>
+                       <i class="icon-world"></i>
+                       <span>
+                         <a href="www.listingstar.html" target="_blank">artidhanotiya2189@gmail.com</a>
+                       </span>
+                     </li>
+                     <li>
+                       <i class="icon-icons74"></i>
+                       <span>LTI Mahape, Navi Mumbai</span>
+                     </li>
+                   </ul>
+                   <ul class="listar-socialicons listar-socialiconsborder">
+                     <li class="listar-facebook">
+                       <a href="javascript:void(0);">
+                         <i class="fa fa-facebook"></i>
+                       </a>
+                     </li>
+                     <li class="listar-twitter">
+                       <a href="javascript:void(0);">
+                         <i class="fa fa-twitter"></i>
+                       </a>
+                     </li>
+                     <li class="listar-googleplus">
+                       <a href="javascript:void(0);">
+                         <i class="fa fa-google-plus"></i>
+                       </a>
+                     </li>
+                     <li class="listar-linkedin">
+                       <a href="javascript:void(0);">
+                         <i class="fa fa-linkedin"></i>
+                       </a>
+                     </li>
+                     <li class="listar-instagram">
+                       <a href="javascript:void(0);">
+                         <i class="fa fa-instagram"></i>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </main>
