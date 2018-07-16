@@ -120,21 +120,28 @@
                       </ul>
                     </div>
                   </div>
-                 
-                 <div id="listar-addressmaplocation" class="listar-addressmaplocation">
-                    <div class="listar-title">
-                      <h3>Location</h3>
-                    </div>
-                    <div id="listar-locationmap" class="listar-locationmap">
+             <!--  <div class="container">
                       <agm-map [latitude]=detail[0].latitude [longitude]=detail[0].longitude>
-                        <agm-marker [latitude]=detail[0].latitude [longitude]=detail[0].longitude></agm-marker>
-                      </agm-map>
-                    </div>
-                  </div>
+                          <agm-marker [latitude]=detail[0].latitude [longitude]=detail[0].longitude></agm-marker>
+                        </agm-map>
+                  </div> --> 
+
+               
                
                 </div>
+                <div id="listar-addressmaplocation" class="listar-addressmaplocation">
+                  <div class="listar-title">
+                    <h3>Location</h3>
+                  </div>
+                  <div id="listar-locationmap" class="listar-locationmap">
+                      <agm-map [latitude]=detail[0].latitude [longitude]=detail[0].longitude>
+                          <agm-marker [latitude]=detail[0].latitude [longitude]=detail[0].longitude></agm-marker>
+                        </agm-map>
+                      </div>
+                </div> 
               </div>
             </div>
+          
             <aside id="listar-stickysidebar" class="listar-sidebar listar-stickysidebar">
               <div class="sidebar__inner">
                 <div class="listar-widget listar-widgetsocialicon">
@@ -213,4 +220,7 @@
     </div>
    
   </div>
+  
+ 
+   
 </main>

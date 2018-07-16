@@ -15,4 +15,9 @@ export class UserService {
   {
        return this.http.get(this.baseUrl+id);
   }
+
+  insertContact(yourName:string ,Email:string ,Subject:string,Message:string):Observable<any>
+  {
+       return this.http.get(this.baseUrl+yourName+"/"+Email+"/"+Subject+"/"+Message);
+  }
 }

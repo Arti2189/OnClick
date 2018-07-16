@@ -8,6 +8,7 @@ import { DetailsComponent } from './details/details.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 import { ListgridComponent } from './listgrid/listgrid.component';
+import { ContactComponent } from './contact/contact.component';
 export const appRoutes:Routes=[
     {
         path:'',
@@ -40,6 +41,10 @@ export const appRoutes:Routes=[
     {
         path:'listgrid',
         component:ListgridComponent
+    },
+    {
+        path:'contactus',
+        component:ContactComponent
     }
    
 ];

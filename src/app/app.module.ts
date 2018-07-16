@@ -5,7 +5,8 @@ import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { APP_BASE_HREF } from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {NgForm} from '@angular/forms';
 import{Ng2SearchPipeModule} from 'ng2-search-filter';
 import {Ng2OrderModule} from 'ng2-order-pipe';
 import {NgxPaginationModule} from 'ngx-pagination'; 
@@ -20,10 +21,8 @@ import { DetailsComponent } from './details/details.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 import { ListgridComponent } from './listgrid/listgrid.component';
-
 import { AgmCoreModule } from '@agm/core';
 import { ContactComponent } from './contact/contact.component';
-
 
 @NgModule({
   declarations: [
@@ -42,6 +41,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     Ng2OrderModule,
     NgxPaginationModule,
     HttpClientModule,
@@ -50,7 +50,6 @@ import { ContactComponent } from './contact/contact.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBxlHaX-MF1tQYJhjpk3w1aJwToJ2Di3BQ'
     })
-
   ],
   providers: [
     UserService,

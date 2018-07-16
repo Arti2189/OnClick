@@ -9,11 +9,12 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
       detail=[];
+     
       private uid:string;
   constructor(private activateRouter:ActivatedRoute,private userService:UserService) {
     let object = this;
     object.uid = this.activateRouter.snapshot.paramMap.get('id');
-    
+  
    }
 
   ngOnInit() 
@@ -24,5 +25,5 @@ export class DetailsComponent implements OnInit {
       console.log(this.detail);
     })
   }
-
+  
 }
