@@ -16,7 +16,11 @@ export class UserService {
   }
 
   insertContact(yourName: string, Email: string, Subject: string, Message: string): Observable<any> {
-    return this.http.get(this.baseUrl + yourName + "/" + Email + "/" + Subject + "/" + Message);
+    return this.http.get(this.baseUrl + "contactus/" + yourName + "/" + Email + "/" + Subject + "/" + Message);
+  }
+//****************************** Register User ***********************/
+  register(username: string, emailaddress: string, password: string, confirmpassword: string): Observable<any> {
+    return this.http.get(this.baseUrl + "register/" + username + "/" + emailaddress + "/" + password + "/" + confirmpassword);
   }
 
   validateContact(contact) {

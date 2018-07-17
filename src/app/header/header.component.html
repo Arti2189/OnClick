@@ -102,37 +102,30 @@
                       </div>
                       <span><a href="#">Lost your Password?</a></span>
                     </div>
-                    <button class="listar-btn listar-btngreen">Register</button>
+                    <button class="listar-btn listar-btngreen">Login</button>
                   </fieldset>
                 </form>
               </div>
-              <div role="tabpanel" class="tab-pane fade" id="listar-register">
+              <div role="tabpanel" class="tab-pane" id="listar-register" #registerForm="ngForm"  (ngSubmit)="register(registerForm)">
                 <form class="listar-formtheme listar-formlogin">
                   <fieldset>
                     <div class="form-group listar-inputwithicon">
                       <i class="icon-profile-male"></i>
-                      <input type="text" name="username" class="form-control" placeholder="Username">
+                      <input type="text" name="username" class="form-control" placeholder="Username"  [(ngModel)]="username" class="form-control" required>
                     </div>
                     <div class="form-group listar-inputwithicon">
                       <i class="icon-icons208"></i>
-                      <input type="email" name="emailaddress" class="form-control" placeholder="Email Address">
+                      <input type="email" name="emailaddress" class="form-control" placeholder="Email Address" [(ngModel)]="emailaddress" class="form-control" required>
                     </div>
                     <div class="form-group listar-inputwithicon">
                       <i class="icon-lock-stripes"></i>
-                      <input type="password" name="password" class="form-control" placeholder="Password">
+                      <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="password" class="form-control" required>
                     </div>
                     <div class="form-group listar-inputwithicon">
                       <i class="icon-lock-stripes"></i>
-                      <input type="password" name="confirmpassword" class="form-control" placeholder="Password">
+                      <input type="password" name="confirmpassword" class="form-control" placeholder="Password" [(ngModel)]="confirmpassword" class="form-control" required>
                     </div>
-                    <div class="form-group">
-                      <div class="listar-checkbox">
-                        <input type="checkbox" name="remember" id="rememberpass">
-                        <label for="rememberpass">Remember me</label>
-                      </div>
-                      <span><a href="#">Lost your Password?</a></span>
-                    </div>
-                    <button class="listar-btn listar-btngreen">login</button>
+                    <button class="listar-btn listar-btngreen" type="submit">Register</button>
                   </fieldset>
                 </form>
               </div>
