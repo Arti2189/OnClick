@@ -270,7 +270,9 @@ address { font-style: italic; }
 }
 
 .search-body {
-    padding: 40px;
+	padding: 40px;
+	background-color: #c7c8ce;
+	margin:30px 20px;
 }
 
  /*****************************************/
@@ -2772,6 +2774,7 @@ body.listar-hidescroll{overflow: hidden;}
 
   }
 
+
   .container-1 input#search::-webkit-input-placeholder {
 	color: #65737e;
  }
@@ -2790,6 +2793,15 @@ body.listar-hidescroll{overflow: hidden;}
 	background: #ffffff;
 	width: 100%;
 	color:#000;
+  }
+
+  .container-2{
+    width: 200px;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	justify-content: center;
+	margin:8px auto 0 auto;
   }
   
 .listar-listingbanner{
