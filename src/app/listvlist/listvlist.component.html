@@ -83,6 +83,49 @@
   </div>
     </div>
     </div>-->
+
+    <div class="search clearfix">
+      <div class="searcht-heading">
+        <div class="clearfix"></div>
+      </div>
+  
+      <div class="search-body">
+        <form class="row" #searchForm="ngForm" (ngSubmit)="searchData(searchForm)">
+          <div class="col-xs-12 col-md-6 col-lg-1"></div>
+          <div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+            <div class="form-group">
+              <input type="text" name="keyword" class="form-control" id="Keyword" placeholder="Enter Keyword" ngModel> </div>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+            <div class="form-group">
+              <input type="text" name="state" class="form-control" id="state" placeholder="Enter State" ngModel> </div>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+            <div class="form-group">
+              <input type="text" name="city" class="form-control" id="city" placeholder="Enter City" ngModel> </div>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+            <div class="form-group">
+              <input type="text" name="categories" class="form-control" id="categories" placeholder="Enter categories" ngModel> </div>
+          </div>
+  
+          <div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+            <div class="form-group">
+              <select class="form-control" id="exampleSelect1" ngValue="op1" (change)="getValue($event.target.value)">
+                <option value="1" name="op1">Filter</option>
+                <option value="2" name="op1">High To Low</option>
+                <option value="3" name="op1">Low To High</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-2">
+            <input type="submit" value="Search" class="btn theme-btn  btn-block">
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
               <div class="listar-themeposts listar-placesposts listar-listview">
                 <fieldset>
