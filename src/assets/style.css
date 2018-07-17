@@ -254,7 +254,7 @@ address { font-style: italic; }
 	  widget search bar 
  ____________________________________________*/
 
- .widget {
+ .search {
     /*border: 1px solid #eaebeb;*/
     background: #113233;
     border-radius: 3px;
@@ -262,14 +262,14 @@ address { font-style: italic; }
 	
 }
 
-.widget-heading {
+.search-heading {
     padding: 15px;
     color: #fff;
     border-radius: 3px;
     border-bottom: 1px solid #eaebeb;
 }
 
-.widget-body {
+.search-body {
     padding: 40px;
 }
 
