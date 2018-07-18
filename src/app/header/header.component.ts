@@ -52,9 +52,7 @@ export class HeaderComponent implements OnInit {
     if (this.username != "" && this.password != "" ) {
       this.userService.loginUser(this.username,this.password)
       .subscribe(data => {
-        console.log(data);
          this.searchUser = data; });
-      console.log(this.searchUser);
     }
 
     }
