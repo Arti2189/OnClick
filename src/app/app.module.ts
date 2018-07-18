@@ -13,6 +13,7 @@ import {Ng2OrderModule} from 'ng2-order-pipe';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import {UserService} from "./user.service";
 import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -45,6 +46,7 @@ import { ContactComponent } from './contact/contact.component';
     ReactiveFormsModule,
     Ng2OrderModule,
     NgxPaginationModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FlashMessageModule,
     Ng2SearchPipeModule, //including into imports

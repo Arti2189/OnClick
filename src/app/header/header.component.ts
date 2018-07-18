@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit {
   password:string = "";
   confirmpassword:string = "";
 
+  searchUser=[];
+
   constructor(private userService:UserService,) {}
 
     register(form:NgForm){
@@ -27,6 +29,7 @@ export class HeaderComponent implements OnInit {
      this.emailaddress = form.value.emailaddress;
      this.password = form.value.password;
      this.confirmpassword = form.value.confirmpassword; 
+
      
      this.userService.register(this.username,this.emailaddress,this.password,this.confirmpassword)
     .subscribe(data=>{
@@ -42,7 +45,22 @@ export class HeaderComponent implements OnInit {
     }) 
   }
 
+    login(form: NgForm) {
+    this.username = form.value.username;
+    this.password = form.value.password;
+    //  console.log(this.username + " " + this.password);
+    if (this.username != "" && this.password != "" ) {
+      this.userService.loginUser(this.username,this.password)
+      .subscribe(data => {
+        console.log(data);
+         this.searchUser = data; });
+      console.log(this.searchUser);
+    }
+
+    }
+
   ngOnInit() {
   }
 
 }
+

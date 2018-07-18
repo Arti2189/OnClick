@@ -41,44 +41,44 @@
     Banner Ends Here
     **********************************
 	-->
-	
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left" >
-			<div class="search-body">
-					<form class="row" #searchForm="ngForm" (ngSubmit)="searchData(searchForm)">
-						<div class="col-xs-12 col-md-6 col-lg-1"></div>
-						<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
-							<div class="form-group">
-								<input type="text" name="keyword" class="form-control" id="Keyword" placeholder="Enter Keyword" ngModel> </div>
-						</div>
-						<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
-							<div class="form-group">
-								<input type="text" name="state" class="form-control" id="state" placeholder="Enter State" ngModel> </div>
-						</div>
-						<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
-							<div class="form-group">
-								<input type="text" name="city" class="form-control" id="city" placeholder="Enter City" ngModel> </div>
-						</div>
-						<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
-							<div class="form-group">
-								<input type="text" name="categories" class="form-control" id="categories" placeholder="Enter categories" ngModel> </div>
-						</div>
-		
-						<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
-							<div class="form-group">
-								<select class="form-control" id="exampleSelect1" ngValue="op1" (change)="getValue($event.target.value)">
-									<option value="1" name="op1">Filter</option>
-									<option value="2" name="op1">High To Low</option>
-									<option value="3" name="op1">Low To High</option>
-								</select>
-							</div>
-						</div>
-						<div class="container-2" >
-							<input type="submit" value="Search" class="btn btn-block" style="padding:10px;background-color:#007bff">
-						</div>
-		
-					</form>
+
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
+		<div class="search-body">
+			<form class="row" #searchForm="ngForm" (ngSubmit)="searchData(searchForm)">
+				<div class="col-xs-12 col-md-6 col-lg-1"></div>
+				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+					<div class="form-group">
+						<input type="text" name="keyword" class="form-control" id="Keyword" placeholder="Enter Keyword" ngModel> </div>
 				</div>
-		 </div> 
+				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+					<div class="form-group">
+						<input type="text" name="state" class="form-control" id="state" placeholder="Enter State" ngModel> </div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+					<div class="form-group">
+						<input type="text" name="city" class="form-control" id="city" placeholder="Enter City" ngModel> </div>
+				</div>
+				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+					<div class="form-group">
+						<input type="text" name="categories" class="form-control" id="categories" placeholder="Enter categories" ngModel> </div>
+				</div>
+
+				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
+					<div class="form-group">
+						<select class="form-control" id="exampleSelect1" ngValue="op1" (change)="getValue($event.target.value)">
+							<option value="1" name="op1">Filter</option>
+							<option value="2" name="op1">High To Low</option>
+							<option value="3" name="op1">Low To High</option>
+						</select>
+					</div>
+				</div>
+				<div class="container-2">
+					<input type="submit" value="Search" class="btn btn-block" style="padding:10px;background-color:#5e618b">
+				</div>
+
+			</form>
+		</div>
+	</div>
 
 
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
@@ -88,16 +88,11 @@
 
 					<div class="listar-select">
 						Order By:
-						<!--  <select>
-                          <option>Default</option>
-                          <option>Ascending</option>
-                          <option>Descending</option>
-												</select>-->
-				
-						<div class="btn btn-primary" (click)="sort('stars')" style="margin-right:3px">
+
+						<div class="btn" (click)="sort('stars')" style="margin-right:3px;background-color:#cdcee4">
 							Ratings
 						</div>
-						<div class="btn btn-primary" (click)="sort('is_open')">
+						<div class="btn" (click)="sort('is_open')" style="background-color:#cdcee4">
 							Is Open
 						</div>
 					</div>
@@ -111,15 +106,9 @@
 							</li>
 							<li class="listar-active">
 								<a routerLink="../listgrid">
-									<i class="fa fa-th-large"></i>
+									<i class="fa fa-th-large" aria-hidden="true"></i>
 								</a>
 							</li>
-							<li>
-								<a href="map.html">
-									<i class="icon-icons74"></i>
-								</a>
-							</li>
-
 						</ul>
 					</div>
 
@@ -155,6 +144,7 @@
 									<a class="listar-btnquickinfo" href="#" data-toggle="modal" data-target=".listar-placequickview">
 										<i class="icon-expand"></i>
 									</a>
+
 									<a class="listar-btnquickinfo" href="javascript:void(0);">
 										<i class="icon-heart2"></i>
 									</a>
@@ -211,8 +201,7 @@
 				<div class="listar-postcontent">
 					<h3>
 						<a href="javascript:void(0);">Serena Hotel</a>
-						<i class="icon-checkmark listar-postverified listar-themetooltip" data-toggle="tooltip" data-placement="top"
-						 title="Verified"></i>
+						<i class="icon-checkmark listar-postverified listar-themetooltip" data-toggle="tooltip" data-placement="top" title="Verified"></i>
 					</h3>
 					<div class="listar-description">
 						<p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque.

@@ -66,13 +66,13 @@ h4 a,
 h5 a,
 h6 a { color: #484848;}
 p a,
-p a:hover { text-decoration:underline; }
+p a:hover { text-decoration:none; }
 p {
 	margin: 0 0 20px;
 	line-height: 24px;
 	letter-spacing: normal;
 }
-a { text-decoration: none; }
+a { text-decoration: none !important; }
 a:hover, a:focus, a:active {
 	outline: none;
 	text-decoration: none;
@@ -92,10 +92,7 @@ iframe {
 	float: left;
 	border: none;
 }
-.wp-caption,
-.wp-caption-text,
-.gallery-caption,
-.bypostauthor {}
+
 .wp-caption.alignleft,
 .wp-caption.alignnone { width: 100%; }
 button { border: none; }
@@ -271,7 +268,7 @@ address { font-style: italic; }
 
 .search-body {
 	padding: 40px;
-	background-color: #c7c8ce;
+	background-color: #f5eeee;
 	margin:30px 20px;
 }
 
@@ -403,7 +400,7 @@ address { font-style: italic; }
 	width:100%;
 	float:left;
 }
-.listar-sectionspace {padding: 40px 0px 40px 0px;}
+.listar-sectionspace {padding: 50px 0px 0px 0px;}
 .listar-locationmap,
 .listar-postlocationmap {
 	width: 100%;
@@ -806,6 +803,7 @@ li.listar-rss a { background:#ff6600; }
 }
 .listar-leftbox{ float: left; }
 .listar-rightbox{ float: right;
+	              margin-right: 30px;
                  }
 .listar-sectionhead{
 	width: 100%;
@@ -837,6 +835,8 @@ li.listar-rss a { background:#ff6600; }
 	width: 100%;
 	float: left;
 	background: rgba(40,42,56,0.20);
+	margin-top:40px;
+	margin-bottom:60px;
 }
 .listar-overlapcontent{padding: 200px 0 100px;}
 .listar-btnplay{
@@ -872,6 +872,7 @@ li.listar-rss a { background:#ff6600; }
 .listar-sliderdots{
 	height: 50px;
 	padding: 40px 0 0;
+	margin-bottom: 15px;
 }
 .listar-themetooltip + div{font:400 10px/20px 'Saira', Arial, Helvetica, sans-serif;}
 .listar-themetooltip + div .tooltip-inner {padding: 0 8px;}
@@ -1767,6 +1768,17 @@ body.listar-hidescroll{overflow: hidden;}
 	-webkit-border-radius: 10px;
 			border-radius: 10px;
 }
+
+.listar-featuredimg1{
+	margin: 0;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	-webkit-border-radius: 10px;
+			border-radius: 10px;
+}
+
 .listar-featuredimg > a{
 	color: #fff;
 	display: block;
@@ -1786,6 +1798,7 @@ body.listar-hidescroll{overflow: hidden;}
 	width: 100%;
 	position: absolute;
 	padding: 20% 20px 20px 20px;
+	overflow : hidden;
 }
 .listar-postcontent{
 	width: 100%;
@@ -1886,7 +1899,7 @@ body.listar-hidescroll{overflow: hidden;}
 	color: #fff;
 	font-size: 14px;
 	line-height: 17px;
-	margin: 0 0 60px;
+	margin: 0 0 30px;
 	text-align: center;
 }
 .listar-videobox h2 span{
@@ -2049,6 +2062,7 @@ body.listar-hidescroll{overflow: hidden;}
 	padding: 30px 20px 0;
 }
 .listar-placespost .listar-postcontent h3{
+	height:40px;
 	line-height: 20px;
 	position: relative;
 	padding: 0 30px 0 0;
@@ -2810,7 +2824,7 @@ body.listar-hidescroll{overflow: hidden;}
 	background: url(images/slider23.jpg) no-repeat 50% 50%;
 	background-attachment: fixed;
 }
-.listar-innerbannerparallaxcolor{padding: 170px 0;}
+.listar-innerbannerparallaxcolor{padding: 23px 0;}
 .listar-innerbannercontent{
 	width: 100%;
 	float: left;
@@ -3711,7 +3725,7 @@ body.listar-hidescroll{overflow: hidden;}
 }
 .listar-listview .listar-featuredimg a img{
 	width: -webkit-fill-available;
-	height: 185px;
+	height: 205px;
 	max-width: none;
 }
 

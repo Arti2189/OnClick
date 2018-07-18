@@ -130,7 +130,7 @@ blockquote,
 .listar-dropdownmen ul li a:hover i,
 .listar-dropdownmen ul li a:hover span,
 .listar-categorytitle h3,
-.listar-categorybox:hover .listar-cateicon { color: #565cb0; }
+.listar-categorybox:hover .listar-cateicon { color: #9498cf; }
 /*=============================================
 			Theme Background Color
 =============================================*/
@@ -161,7 +161,7 @@ blockquote,
 .listar-tablefooter .listar-pagination ul li.listar-active a,
 .listar-cateicon,
 .listar-categorybox:hover,
-.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote { background:#565cb0; }
+.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote { background:#5e618b; }
 /*=============================================
 			Theme Border Color
 =============================================*/
@@ -173,5 +173,5 @@ blockquote,
 .listar-fileuploadlabel .listar-btn,
 .listar-btncartdropdown:hover,
 .listar-btncartdropdown:focus,
-.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote:before { border-color: #565cb0; }
-.tooltip.top .tooltip-arrow{ border-top-color: #565cb0; }
+.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote:before { border-color: #5e618b; }
+.tooltip.top .tooltip-arrow{ border-top-color: #5e618b; }

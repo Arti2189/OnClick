@@ -59,7 +59,7 @@
                 <li><a routerLink="banner" >Home</a></li>
                 <li><a routerLink="listgrid">Explore</a></li> 
                 <li><a routerLink="blog">Blog</a></li> 
-               
+                <li><a href="#about">About</a></li>
                 <li><a routerLink="contactus">Contact Us</a></li>
               
               </ul>
@@ -73,7 +73,7 @@
   <!--************************************
       Login Singup Start
   *************************************-->
- <!--<div id="listar-loginsingup" class="listar-loginsingup">
+ <div id="listar-loginsingup" class="listar-loginsingup">
     <button type="button" class="listar-btnclose">x</button>
     <figure class="listar-loginsingupimg" data-vide-bg="poster: images/bgjoin.jpg" data-vide-options="position: 50% 50%"></figure>
     <div class="listar-contentarea">
@@ -85,16 +85,16 @@
               <li role="presentation"><a href="#listar-register" data-toggle="tab">Register</a></li>
             </ul>
             <div class="tab-content listar-tabcontentloginregistered">
-              <div role="tabpanel" class="tab-pane active fade in" id="listar-loging">
-                <form class="listar-formtheme listar-formlogin">
+              <div role="tabpanel" class="tab-pane active " id="listar-loging">
+                <form class="listar-formtheme listar-formlogin" #searchUser="ngForm" (ngSubmit)="login(searchUser)" >
                   <fieldset>
                     <div class="form-group listar-inputwithicon">
                       <i class="icon-profile-male"></i>
-                      <input type="text" name="username" class="form-control" placeholder="Username Or Email">
+                      <input type="text" name="username" class="form-control" placeholder="Username Or Email" ngModel >
                     </div>
                     <div class="form-group listar-inputwithicon">
                       <i class="icon-icons208"></i>
-                      <input type="password" name="password" class="form-control" placeholder="Password">
+                      <input type="password" name="password" class="form-control" placeholder="Password" ngModel>
                     </div>
                     <div class="form-group">
                       <div class="listar-checkbox">
@@ -103,12 +103,12 @@
                       </div>
                       <span><a href="#">Lost your Password?</a></span>
                     </div>
-                    <button class="listar-btn listar-btngreen">Login</button>
+                    <input type="submit" class="listar-btn listar-btngreen" >Login
                   </fieldset>
                 </form>
               </div>
-              <div role="tabpanel" class="tab-pane" id="listar-register" #registerForm="ngForm"  (ngSubmit)="register(registerForm)">
-                <form class="listar-formtheme listar-formlogin">
+              <div role="tabpanel" class="tab-pane" id="listar-register" >
+                <form class="listar-formtheme listar-formlogin" #registerForm="ngForm"  (ngSubmit)="register(registerForm)">
                   <fieldset>
                     <div class="form-group listar-inputwithicon">
                       <i class="icon-profile-male"></i>
@@ -145,4 +145,3 @@
       </div>
     </div>
   </div>
--->
