@@ -405,7 +405,7 @@ address { font-style: italic; }
 .listar-postlocationmap {
 	width: 100%;
 	float: left;
-	height: 600px;
+	height: 500px;
 }
 .listar-btn-sm {
 	padding: 0 20px;
@@ -1761,6 +1761,18 @@ body.listar-hidescroll{overflow: hidden;}
 }
 .listar-featuredimg{
 	margin: 0;
+	height:300px;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	-webkit-border-radius: 10px;
+			border-radius: 10px;
+}
+
+.listar-featuredimg2{
+	margin: 0;
+	height:500px;
 	width: 100%;
 	float: left;
 	overflow: hidden;
@@ -1778,6 +1790,8 @@ body.listar-hidescroll{overflow: hidden;}
 	-webkit-border-radius: 10px;
 			border-radius: 10px;
 }
+
+/*  */
 
 .listar-featuredimg > a{
 	color: #fff;
@@ -4344,7 +4358,7 @@ input[type=file].listar-fileinput{display: none;}
 .listar-detailvtwo .listar-postcontent .listar-themepostfoot{border-color: rgba(255,255,255,0.30);}
 .listar-detailvtwo .listar-themepostfoot ul{text-align: left;}
 .listar-detailvtwo .listar-themepostfoot ul li a{color: #fff;}
-.listar-detailcontent{margin: 100px 0 0;}
+.listar-detailcontent{margin: 50px 0 0;}
 .listar-detailcontent:after{
 	clear: both;
 	content: '';
@@ -4428,7 +4442,7 @@ input[type=file].listar-fileinput{display: none;}
 .listar-sectionholder .listar-amenitiesarea{
 	margin: 0;
 	border: 0;
-	padding: 0 0 60px;
+	padding: 0 0 30px;
 }
 .listar-sectionholder .listar-amenities li{width: 33.33%;}
 .listar-sectionholder .listar-pricing{padding: 0 0 60px;}

@@ -14,6 +14,7 @@ export class DetailsComponent implements OnInit {
   constructor(private activateRouter:ActivatedRoute,private userService:UserService) {
     let object = this;
     object.uid = this.activateRouter.snapshot.paramMap.get('id');
+    console.log("heee ram");
   
    }
 
