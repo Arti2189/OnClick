@@ -432,7 +432,7 @@ jQuery(document).on('ready', function() {
 	/*--------------------------------------
 			PRETTY PHOTO GALLERY			
 	--------------------------------------*/
-	jQuery("a[data-rel]").each(function () {
+	/*jQuery("a[data-rel]").each(function () {
 		jQuery(this).attr("rel", jQuery(this).data("rel"));
 	});
 	jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
@@ -441,7 +441,7 @@ jQuery(document).on('ready', function() {
 		slideshow: 3000,
 		autoplay_slideshow: false,
 		social_tools: false
-	});
+	});*/
 	/*--------------------------------------
 			STICKY SIDEBAR					
 	--------------------------------------*/
