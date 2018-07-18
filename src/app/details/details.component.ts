@@ -20,9 +20,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit() 
   { this.userService.getDetails(this.uid)
     .subscribe(data=>{
-      console.log(data);
       this.detail=data;
-      console.log(this.detail);
     })
   }
   

@@ -51,14 +51,12 @@ export class ContactComponent implements OnInit {
     //required fields
      if(!this.userService.validateContact(contact)){
          this.flashMessage.danger('please fill in all fields',{cssClass:'alert-danger',timeout:3000});
-         console.log('please fill in all fields');
          return false;
        }
 
     //validate Email
     if(!this.userService.validateEmail(contact.Email)){
       this.flashMessage.danger('please use a valid email',{cssClass:'alert-danger',timeout:3000});
-      console.log('please use a valid email');
       return false;
     }
     }
