@@ -26,6 +26,7 @@ import { ListgridComponent } from './listgrid/listgrid.component';
 import { AgmCoreModule } from '@agm/core';
 import { ContactComponent } from './contact/contact.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

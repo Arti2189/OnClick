@@ -159,59 +159,59 @@ export class ListvlistComponent implements OnInit {
     }
 
     //sorting low to high -------------------------------------------------------------
-    else if (this.keyword != "" && this.state == "" && this.city == "" && this.categories == "" && this.sortValue == "2") {
+    else if (this.keyword != "" && this.state == "" && this.city == "" && this.categories == "" && this.sortValue == "3") {
       this.check = "10003";
       this.userService.getDataByKeywordL(this.keyword).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword == "" && this.state != "" && this.city == "" && this.categories == "" && this.sortValue == "2") {
+    else if (this.keyword == "" && this.state != "" && this.city == "" && this.categories == "" && this.sortValue == "3") {
       this.check = "01003";
       this.userService.getDataByStateL(this.state).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword == "" && this.state == "" && this.city != "" && this.categories == "" && this.sortValue == "2") {
+    else if (this.keyword == "" && this.state == "" && this.city != "" && this.categories == "" && this.sortValue == "3") {
       this.check = "00103";
       this.userService.getDataByCityL(this.city).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword == "" && this.state == "" && this.city == "" && this.categories != "" && this.sortValue == "2") {
+    else if (this.keyword == "" && this.state == "" && this.city == "" && this.categories != "" && this.sortValue == "3") {
       this.check = "00013";
       this.userService.getDataByCategoriesL(this.categories).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword != "" && this.state != "" && this.city == "" && this.categories == "" && this.sortValue == "2") {
+    else if (this.keyword != "" && this.state != "" && this.city == "" && this.categories == "" && this.sortValue == "3") {
       this.check = "11003";
       this.userService.getDataByKeywordAndStateL(this.keyword, this.state).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword != "" && this.state == "" && this.city != "" && this.categories == "" && this.sortValue == "2") {
+    else if (this.keyword != "" && this.state == "" && this.city != "" && this.categories == "" && this.sortValue == "3") {
       this.check = "10103";
       this.userService.getDataByKeywordAndCityL(this.keyword, this.city).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword != "" && this.state == "" && this.city == "" && this.categories != "" && this.sortValue == "2") {
+    else if (this.keyword != "" && this.state == "" && this.city == "" && this.categories != "" && this.sortValue == "3") {
       this.check = "10013";
       this.userService.getDataByKeywordAndCategoriesL(this.keyword, this.categories).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword == "" && this.state != "" && this.city != "" && this.categories == "" && this.sortValue == "2") {
+    else if (this.keyword == "" && this.state != "" && this.city != "" && this.categories == "" && this.sortValue == "3") {
       this.check = "01103";
       this.userService.getDataByStateAndCityL(this.state, this.city).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword == "" && this.state != "" && this.city == "" && this.categories != "" && this.sortValue == "2") {
+    else if (this.keyword == "" && this.state != "" && this.city == "" && this.categories != "" && this.sortValue == "3") {
       this.check = "01013";
       this.userService.getDataByStateAndCategoriesL(this.state, this.categories).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword == "" && this.state == "" && this.city != "" && this.categories != "" && this.sortValue == "2") {
+    else if (this.keyword == "" && this.state == "" && this.city != "" && this.categories != "" && this.sortValue == "3") {
       this.check = "00113";
       this.userService.getDataByCityAndCategoriesL(this.city, this.categories).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword != "" && this.state != "" && this.city != "" && this.categories == "" && this.sortValue == "2") {
+    else if (this.keyword != "" && this.state != "" && this.city != "" && this.categories == "" && this.sortValue == "3") {
       this.check = "11103";
       this.userService.getDataByKeywordStateAndCityL(this.keyword, this.state, this.city).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword != "" && this.state != "" && this.city == "" && this.categories != "" && this.sortValue == "2") {
+    else if (this.keyword != "" && this.state != "" && this.city == "" && this.categories != "" && this.sortValue == "3") {
       this.check = "11013";
       this.userService.getDataByKeywordStateAndCategoriesL(this.keyword, this.state, this.categories).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword == "" && this.state != "" && this.city != "" && this.categories != "" && this.sortValue == "2") {
+    else if (this.keyword == "" && this.state != "" && this.city != "" && this.categories != "" && this.sortValue == "3") {
       this.check = "01113";
       this.userService.getDataByStateCityAndCategoriesL(this.state, this.city, this.categories).subscribe(data => { this.users = data; });
     }
-    else if (this.keyword != "" && this.state != "" && this.city != "" && this.categories != "" && this.sortValue == "2") {
+    else if (this.keyword != "" && this.state != "" && this.city != "" && this.categories != "" && this.sortValue == "3") {
       this.check = "11113";
       this.userService.getDataByKeywordStateCityAndCategoriesL(this.keyword, this.state, this.city, this.categories).subscribe(data => { this.users = data; });
     }

@@ -9,6 +9,7 @@ import { BlogComponent } from './blog/blog.component';
 import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 import { ListgridComponent } from './listgrid/listgrid.component';
 import { ContactComponent } from './contact/contact.component';
+
 export const appRoutes:Routes=[
     {
         path:'',
