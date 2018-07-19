@@ -397,7 +397,7 @@ select.form-control:not([size]):not([multiple]){
 	width:100%;
 	float:left;
 }
-.listar-sectionspace {padding: 50px 0px 0px 0px;}
+.listar-sectionspace {padding: 75px 0px 0px 0px;}
 .listar-locationmap,
 .listar-postlocationmap {
 	width: 100%;
@@ -2804,6 +2804,14 @@ body.listar-hidescroll{overflow: hidden;}
 	float: left;
 	background: url(images/parallax/bgparallax-06.jpg) no-repeat 50% 50%;
 	background-attachment: fixed;
+}
+
+.listar-innerbanner1{
+	width: 100%;
+	float: left;
+	background: url(images/parallax/light.jpg) no-repeat 50% 50%;
+	background-attachment: fixed;
+	height:350px;
 }
 
 /* listing banner */

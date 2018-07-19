@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   Subject:string = "";
   Message:string = "";
 
-  constructor(private userService:UserService,private flashMessage: FlashMessage) {}
+  constructor(private userService:UserService) {}
 
  insertContact(form:NgForm){
      this.data = form.value.yourName + " " + form.value.Email + " " + form.value.Subject + " " + form.value.Message;
@@ -40,26 +40,7 @@ export class ContactComponent implements OnInit {
       this.Message = "";
 
     }) 
-
-    const contact = {
-      yourName:this.yourName,
-      Email:this.Email,
-      Subject:this.Subject,
-      Message:this.Message
-    }
-
-    //required fields
-     if(!this.userService.validateContact(contact)){
-         this.flashMessage.danger('please fill in all fields',{cssClass:'alert-danger',timeout:3000});
-         return false;
-       }
-
-    //validate Email
-    if(!this.userService.validateEmail(contact.Email)){
-      this.flashMessage.danger('please use a valid email',{cssClass:'alert-danger',timeout:3000});
-      return false;
-    }
-    }
+  }
     
   
   ngOnInit() {

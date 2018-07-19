@@ -437,13 +437,13 @@ jQuery(document).on('ready', function() {
 	jQuery("a[data-rel]").each(function () {
 		jQuery(this).attr("rel", jQuery(this).data("rel"));
 	});
-	jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
+	/*jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
 		animation_speed: 'normal',
 		theme: 'dark_square',
 		slideshow: 3000,
 		autoplay_slideshow: false,
 		social_tools: false
-	});
+	});*/
 	/*--------------------------------------
 			STICKY SIDEBAR					
 	--------------------------------------*/

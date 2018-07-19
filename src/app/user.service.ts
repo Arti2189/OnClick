@@ -14,7 +14,8 @@ export class UserService {
   getDetails(id: string): Observable<any> {
     return this.http.get(this.baseUrl + id);
   }
-
+   
+  //*********************** insert contact us ***********************/
   insertContact(yourName: string, Email: string, Subject: string, Message: string): Observable<any> {
     return this.http.get(this.baseUrl + "contactus/" + yourName + "/" + Email + "/" + Subject + "/" + Message);
   }
@@ -26,20 +27,14 @@ export class UserService {
   loginUser(username: string,password: string): Observable<any> {
     return this.http.get<any>(this.baseUrl + "login/" + username+ "/" + password);
   }
-
-  /********************************************************* */
-  validateContact(contact) {
-    if (contact.yourName == undefined || contact.Email == undefined || contact.Subject == undefined || contact.Message == undefined) {
-      return false;
-    }
-    else {
-      return true;
-    }
+ 
+  /**************************  Insert Review ******************************* */
+  insertReview(yourName: string, Email: string, Category: string, Message: string): Observable<any> {
+    return this.http.get(this.baseUrl + "review/" + yourName + "/" + Email + "/" + Category + "/" + Message);
   }
-
-  validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+  /************************** Get Reviews  ***********************/
+  getReviews() {
+    return this.http.get<any>(this.baseUrl+"/getreviews");
   }
 
   //without sorting---------------------------------------------------------
