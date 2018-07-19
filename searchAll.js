@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(cors());
 var mongojs = require('mongojs');
-var db = mongojs('YELP', ['yelp', 'contact','user']);
+var db = mongojs('YELP', ['yelp', 'contact','user','review']);
 app.use(express.static(__dirname));
 //service call for list users
 
@@ -28,6 +28,21 @@ app.get('/contactus/:yourName/:Email/:Subject/:Message', function (req, res) {
     console.log(req.params.Message);
     db.contact.insert({ "yourName": req.params.yourName, "Email": req.params.Email, "Subject": req.params.Subject, "Message": req.params.Message },
         function (err, docs) { res.json(docs); })
+});
+
+/****************        API for inserting reviews     *****************/
+app.get('/review/:yourName/:Email/:Category/:Message', function (req, res) {
+    console.log(req.params.yourName);
+    console.log(req.params.Email);
+    console.log(req.params.Category);
+    console.log(req.params.Message);
+    db.review.insert({ "yourName": req.params.yourName, "Email": req.params.Email, "Category": req.params.Category, "Message": req.params.Message },
+        function (err, docs) { res.json(docs); })
+});
+
+/*****************     API for fetching Reviews *****************/
+app.get('/getreviews', function (req, res) {
+    db.review.aggregate([{ $match: {} }, { $project: { _id: 0 } }], function (err, docs) { res.json(docs); })
 });
 
 /****************        API for registering users     *****************/
