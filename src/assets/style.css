@@ -2089,10 +2089,7 @@ body.listar-hidescroll{overflow: hidden;}
 	position: absolute;
 	background: #b5b5b5;
 }
-.listar-horizontalthemescrollbar .mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger,
-.listar-horizontalthemescrollbar .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger,
-.listar-horizontalthemescrollbar .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger,
-.listar-horizontalthemescrollbar .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{}
+
 .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail,
 .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
 	height: 1px;
@@ -2406,8 +2403,7 @@ body.listar-hidescroll{overflow: hidden;}
 /* =============================================
 			Blog Post Style
 ============================================= */
-.listar-blogposts{}
-.listar-post{}
+
 .listar-postcategory{
 	z-index: 2;
 	top: 20px;
@@ -3707,7 +3703,7 @@ body.listar-hidescroll{overflow: hidden;}
 /*==============================================
 			Listing V Two Style
 ==============================================*/
-.listar-listingvtwo{}
+
 .listar-listingvtwo .listar-featuredimg{
 	-webkit-border-radius: 10px;
 			border-radius: 10px;
@@ -5331,7 +5327,7 @@ blockquote{
 	line-height: 58px;
 }
 .listar-homebannervthree .listar-formsearchlisting .form-group p{color: #fff;}
-.listar-homebannervthree .listar-formsearchlisting .form-group {}
+
 .listar-bestplacesincity{
 	width: 100%;
 	float: left;
