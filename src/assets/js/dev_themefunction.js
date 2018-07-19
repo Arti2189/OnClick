@@ -38,6 +38,8 @@ jQuery(document).on('ready', function() {
 		});
 	}
 	collapseMenu();
+
+
 	/* ---------------------------------------
 			SIGN IN OPEN CLOSE
 	--------------------------------------- */
