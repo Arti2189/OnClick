@@ -300,7 +300,6 @@ select.form-control:not([size]):not([multiple]){
 	z-index: 1;
 	width: max-content;
 	position: relative;
-	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 
@@ -1674,7 +1673,7 @@ body.listar-hidescroll{overflow: hidden;}
 	max-height: 200px;
 	text-transform: capitalize;
 }
-.chosen-container .chosen-results::-webkit-scrollbar-track{}
+
 .chosen-container .chosen-results::-webkit-scrollbar{width: 4px;}
 .chosen-container .chosen-results::-webkit-scrollbar-thumb{background: #696969;}
 .chosen-container .chosen-results li{
