@@ -1761,7 +1761,7 @@ body.listar-hidescroll{overflow: hidden;}
 }
 .listar-featuredimg{
 	margin: 0;
-	height:300px;
+	/*height:370px; */
 	width: 100%;
 	float: left;
 	overflow: hidden;
@@ -2004,7 +2004,9 @@ body.listar-hidescroll{overflow: hidden;}
 	font-size: 24px;
 	line-height: 27px;
 }
-.listar-feature .listar-description{}
+.listar-feature .listar-description{
+	font-size: 1.5em;
+}
 .listar-feature .listar-description p{margin: 0;}
 .listar-feature:hover .listar-featureicon i{
 	border-color: #fff;

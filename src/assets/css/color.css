@@ -28,7 +28,7 @@ a:active,
 .listar-navfooter ul li a:hover,
 .listar-navfooter ul li:hover a,
 .menu-item-has-children .menu-item-has-children > li:hover > a:before,
-.menu-item-has-children .menu-item-has-children > a:hover:before{ color: #0ebef0; }
+.menu-item-has-children .menu-item-has-children > a:hover:before{ color: #6fbf17; }
 /*=============================================
 			Theme Background Color
 =============================================*/
@@ -51,9 +51,8 @@ a:active,
 .listar-addlistingsteps .actions ul li a,
 .listar-pagination ul li a:hover,
 .listar-pagination ul li.listar-active a,
-.listar-btndelpost:hover,
-.listar-testimonialsvthree .owl-item:nth-child(even) .listar-testimonial blockquote{ background:#0ebef0; }
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background:#0ebef0 !important; }
+.listar-btndelpost:hover{ background:#6fbf17; }
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background:#6fbf17 !important; }
 /*=============================================
 			Theme Border Color
 =============================================*/
@@ -68,13 +67,8 @@ blockquote,
 .listar-addlistingsteps .actions ul li a,
 .listar-pagination ul li a:hover,
 .listar-pagination ul li.listar-active a,
-.listar-btndelpost:hover,
-.listar-testimonialsvthree .owl-item:nth-child(even) .listar-testimonial blockquote:before { border-color: #0ebef0; }
-.pulse:after {
-	-webkit-box-shadow: 0 0 1px 2px #0ebef0;
-	box-shadow: 0 0 1px 2px #0ebef0;
-}
-/* .listar-listingvtwo .listar-placespost .tooltip.top .tooltip-arrow{ border-top-color: #0ebef0; } */
+.listar-btndelpost:hover{ border-color: #6fbf17; }
+/* .listar-listingvtwo .listar-placespost .tooltip.top .tooltip-arrow{ border-top-color: #6fbf17; } */
 /*==========================================================================================
 								Secondary Theme Colors										
 ==========================================================================================*/
@@ -128,9 +122,7 @@ blockquote,
 .listar-dropdownmen ul li:hover a
 .listar-dropdownmen ul li a:hover,
 .listar-dropdownmen ul li a:hover i,
-.listar-dropdownmen ul li a:hover span,
-.listar-categorytitle h3,
-.listar-categorybox:hover .listar-cateicon { color: #565cb0; }
+.listar-dropdownmen ul li a:hover span { color: #2457cf; }
 /*=============================================
 			Theme Background Color
 =============================================*/
@@ -158,10 +150,7 @@ blockquote,
 .listar-btncartdropdown:focus,
 .tg-btnmale,
 .listar-tablefooter .listar-pagination ul li a:hover,
-.listar-tablefooter .listar-pagination ul li.listar-active a,
-.listar-cateicon,
-.listar-categorybox:hover,
-.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote { background:#565cb0; }
+.listar-tablefooter .listar-pagination ul li.listar-active a { background:#2457cf; }
 /*=============================================
 			Theme Border Color
 =============================================*/
@@ -172,6 +161,5 @@ blockquote,
 .listar-views li.listar-active a,
 .listar-fileuploadlabel .listar-btn,
 .listar-btncartdropdown:hover,
-.listar-btncartdropdown:focus,
-.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote:before { border-color: #565cb0; }
-.tooltip.top .tooltip-arrow{ border-top-color: #565cb0; }
+.listar-btncartdropdown:focus { border-color: #2457cf; }
+.tooltip.top .tooltip-arrow{ border-top-color: #2457cf; }

@@ -2,7 +2,7 @@
   <div id="listar-twocolumns" class="listar-twocolumns">
     <div class="listar-themepost listar-placespost listar-detail listar-detailvtwo">
       <figure class="listar-featuredimg">
-        <img src="/assets/images/city2.jpg" alt="image description">
+        <img src="/assets/images/city2.jpg" alt="image description" style = "height:300px">
         <figcaption>
           <div class="container">
             <div class="row">
@@ -24,7 +24,7 @@
                     <li>
                       <a href="javascript:void(0);">
                         <i class="icon-heart2"></i>
-                        <span>23</span>
+                        <span>{{detail[0].stars}}</span>
                       </a>
                     </li>
                     <li>
@@ -51,7 +51,7 @@
                     <li>
                       <span class="listar-tagviews">
                         <i class="icon-eye2"></i>
-                        <span>52</span>
+                        <span>{{}detail[0].review_count}</span>
                       </span>
                     </li>
                   </ul>
@@ -63,7 +63,7 @@
                       </li>
                       <li>
                         <i class="icon-icons74"></i>
-                        <span>Manhattan Hall, London W1K 2EQ UK</span>
+                        <span>{{detail[0].address}}</span>
                       </li>
                       <li>
                         <i class="icon-icons20"></i>
