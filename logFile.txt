@@ -1,7 +1,0 @@
-Directory Name: D:\yelp\express
-StartTimeStamp: Invalid DateFile Name: D:\yelp\express\logger.js
-Process Version: v8.9.4
-Process Time: 0.555
-Memory Use: {"rss":39436288,"heapTotal":20291584,"heapUsed":13850768,"external":18424162}
-- - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
