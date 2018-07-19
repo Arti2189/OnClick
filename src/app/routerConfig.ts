@@ -1,4 +1,4 @@
-import {Routes} from '@angular/router';
+import {Routes,RouterModule} from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -48,3 +48,8 @@ export const appRoutes:Routes=[
     }
    
 ];
+
+export const AppRouting = RouterModule.forRoot(appRoutes, { 
+    useHash: true
+  });
+  

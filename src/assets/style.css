@@ -156,6 +156,7 @@ input:focus,
 	width: 100%;
 	float: left;
 	margin:0 0 20px;
+	box-shadow:10px 5px 10px #5e618b;
 }
 label {
 	color: #666;
@@ -272,6 +273,9 @@ address { font-style: italic; }
 	margin:30px 20px;
 }
 
+select.form-control:not([size]):not([multiple]){
+	height:calc(5.00rem + 2px);
+}
  /*****************************************/
 .listar-select {
 	color:#666;
@@ -2941,6 +2945,7 @@ body.listar-hidescroll{overflow: hidden;}
 .listar-featuresvthree .listar-feature{
 	padding: 45px 30px;
 	background: #fff;
+	box-shadow: 5px 5px 15px #0ebef0;
 	-webkit-border-radius: 20px;
 			border-radius: 20px;
 }
@@ -5304,6 +5309,7 @@ blockquote{
 	padding: 150px 8% 0;
 }
 .listar-bestplacestitle{
+	
 	float: left;
 	padding: 0 30px 0 0;
 }
