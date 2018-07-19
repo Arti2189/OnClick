@@ -1,0 +1,15 @@
+@keyframes changeContent {
+	0% {
+	  content: "What's Your Plan Today";
+	}
+	50% {
+	  color: white;
+	}
+	100% {
+	  content: "What Do You Want To Do Today";
+	}
+  }
+  
+  .listar-bannercontent h1::after {
+	animation: changeContent 15s linear infinite alternate;
+  }
