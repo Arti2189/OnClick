@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from 'src/app/user.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -17,12 +17,14 @@ export class HeaderComponent implements OnInit {
   username: string = "";
   emailaddress: string = "";
   password: string = "";
-  confirmpassword: string = "";
   searchUser = [];
   isLoggedIn: boolean;
   display: string = "";
+  display1: string = "";
+  router: Router;
   //constructor to declare services
-  constructor(private userService: UserService, ) {
+  constructor(private userService: UserService, router:Router) {
+    this.router = router;
     if (localStorage.getItem('user') == null)
       this.isLoggedIn = false;
     else {
@@ -39,14 +41,14 @@ export class HeaderComponent implements OnInit {
   closeModal() {
     this.display = 'none';
   }
+
   //register method to user registration
   register(form: NgForm) {
-    this.data = form.value.username + " " + form.value.emailaddress + " " + form.value.password + " " + form.value.confirmpassword;
+    this.data = form.value.username + " " + form.value.emailaddress + " " + form.value.password;
     this.username = form.value.username;
     this.emailaddress = form.value.emailaddress;
     this.password = form.value.password;
-    this.confirmpassword = form.value.confirmpassword;
-    this.userService.register(this.username, this.emailaddress, this.password, this.confirmpassword)
+    this.userService.register(this.username, this.emailaddress, this.password)
       //subscribe to process data   
       .subscribe(data => {
         console.log(data);
@@ -54,12 +56,9 @@ export class HeaderComponent implements OnInit {
         this.username = "";
         this.emailaddress = "";
         this.password = "";
-        this.confirmpassword = "";
         //put some validation 
         let username: string
-        // localStorage.setItem('user',"Arti");
         localStorage.setItem('user', this.username);
-        // this.username="Arti";//please update are 
         this.username = 'user';
         this.isLoggedIn = true
       })
@@ -72,16 +71,11 @@ export class HeaderComponent implements OnInit {
     if (this.username != "" && this.password != "") {
       this.userService.loginUser(this.username, this.password)
         .subscribe(data => {
-          // this.searchUser = data;
-          //if success 
-          // let username:string
           if (data.length == 0) {
             this.display = 'block';
           }
           else {
-            // localStorage.setItem('user',"Arti");
             localStorage.setItem('user', this.username);
-            //this.username="Arti";
             this.isLoggedIn = true
           }
         });
@@ -92,7 +86,7 @@ export class HeaderComponent implements OnInit {
     console.log('hello');
     localStorage.removeItem('user');
     this.isLoggedIn = false;
-    //route after logout
+    this.router.navigate(['../banner']) //routing after logout
   }
   ngOnInit() {
   }

@@ -12,10 +12,18 @@
             <li>
               <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="#listar-loginsingup">
                 <i class="icon-smiling-face"></i>
-                <span *ngIf="!isLoggedIn" >Join Now</span>
-                <span *ngIf="isLoggedIn">{{username}}</span>
+                <span *ngIf="!isLoggedIn">Join Now</span>
                 <span *ngIf="isLoggedIn" (click)='logout()'>Logout</span>
-                
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="listar-addnav" *ngIf="isLoggedIn" >
+          <ul>
+            <li>
+              <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="#listar-loginsingup" style="background-color:#0ebef0">
+                <i class="icon-smiling-face"></i>
+                <span>{{username}}</span>
               </a>
             </li>
           </ul>
@@ -57,20 +65,19 @@
   </div>
 </header>
 <div class="modal" [ngStyle]="{'display':display}">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div>
-            <p>Not a valid user</p>
-            
-          </div>
-          <div class="modal-footer">
-            <button class="btn2" (click)="closeModal()">Close</button>
-          </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div>
+          <p>Not a valid user</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn2" (click)="closeModal()">Close</button>
         </div>
       </div>
     </div>
   </div>
+</div>
 <!--************************************
       Login Singup Start
   *************************************-->
@@ -120,11 +127,6 @@
                   <div class="form-group listar-inputwithicon">
                     <i class="icon-lock-stripes"></i>
                     <input type="password" name="password" class="form-control form-field" placeholder="Password" [(ngModel)]="password" required>
-                  </div>
-                  <div class="form-group listar-inputwithicon">
-                    <i class="icon-lock-stripes"></i>
-                    <input type="password" name="confirmpassword" class="form-control form-field" placeholder="Password" [(ngModel)]="confirmpassword"
-                      required>
                   </div>
                   <button class="listar-btn listar-btngreen" type="submit">Register</button>
                 </fieldset>

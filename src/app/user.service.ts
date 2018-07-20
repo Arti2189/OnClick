@@ -20,8 +20,8 @@ export class UserService {
     return this.http.get(this.baseUrl + "contactus/" + yourName + "/" + Email + "/" + Subject + "/" + Message);
   }
   /****************************** Register User ***********************/
-  register(username: string, emailaddress: string, password: string, confirmpassword: string): Observable<any> {
-    return this.http.get(this.baseUrl + "register/" + username + "/" + emailaddress + "/" + password + "/" + confirmpassword);
+  register(username: string, emailaddress: string, password: string): Observable<any> {
+    return this.http.get(this.baseUrl + "register/" + username + "/" + emailaddress + "/" + password);
   }
   /****************************  Login User   **************************/
   loginUser(username: string,password: string): Observable<any> {
