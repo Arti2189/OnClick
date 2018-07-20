@@ -51,7 +51,7 @@
                     <li>
                       <span class="listar-tagviews">
                         <i class="icon-eye2"></i>
-                        <span>{{}detail[0].review_count}</span>
+                        <span>{{detail[0].review_count}}</span>
                       </span>
                     </li>
                   </ul>
@@ -68,7 +68,7 @@
                       <li>
                         <i class="icon-icons20"></i>
                         <span>Today
-                          <span>Closed Now</span> 10:00 AM - 5:00 PM</span>
+                          <span>Open Now</span> 10:00 AM - 5:00 PM</span>
                       </li>
                       <li>
                         <i class="icon-global"></i>
@@ -105,7 +105,7 @@
                             <a href="#listar-addressmaplocation">Location</a>
                           </li>
                           <li>
-                            <a href="#listar-reviews">Reviews</a>
+                            <a routerLink="../blog">Reviews</a>
                           </li>
                         </ul>
                         <ul class="listar-socialicons listar-socialiconsborder">
@@ -155,15 +155,16 @@
                     <a href="#listar-addressmaplocation">Location</a>
                   </li>
                   <li>
-                    <a href="#listar-reviews">Reviews</a>
+                    <a routerLink="./blog">Reviews</a>
                   </li>
                 </ul>
                 <div class="listar-sectionholder">
                   <div id="listar-overview" class="listar-overview">
-                    <p>s blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor
-                      eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                      Mauris in erat justo. Nunc commodo nisi id viverra venenatis.</p>
-                    <p>a, erat sed fermentum feugiat, velit mauris egestas quam.</p>
+                    <p style="font-size:1.6em">This is the best nearest place you can visit which have availability to serve your purpose with 
+                       high quality and demanded quantity.Here we provide following categories {{detail[0].categories}}
+                    </p>
+                    <h4>{{detail[0].name}} is nearest to {{detail[0].neighborhood}}</h4>
+                    <p></p>
 
                     <div class="listar-amenitiesarea">
                       <div class="listar-title">
@@ -186,14 +187,6 @@
                       </ul>
                     </div>
                   </div>
-                  <!--  <div class="container">
-                      <agm-map [latitude]=detail[0].latitude [longitude]=detail[0].longitude>
-                          <agm-marker [latitude]=detail[0].latitude [longitude]=detail[0].longitude></agm-marker>
-                        </agm-map>
-                  </div> -->
-
-
-
                 </div>
                 <div id="listar-addressmaplocation" class="listar-addressmaplocation">
                   <div class="listar-title">
@@ -286,7 +279,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="listar-widget">
+                <div class="listar-widget" id="#listar-pricing">
                   <div class="listar-widgettitle">
                     <h3>
                       <i class="icon-trophy"></i>
@@ -311,8 +304,7 @@
             </aside>
           </div>
         </div>
-      </div> 
-      
+      </div>  
     </div>
   </div>
 </main>

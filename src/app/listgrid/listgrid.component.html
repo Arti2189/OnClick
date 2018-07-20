@@ -1,7 +1,5 @@
-
 <main id="listar-main" class="listar-main listar-haslayout">
-
-	<!-- 
+<!-- 
      ***************************
      Banner Starts Here
       *****************************
@@ -24,7 +22,6 @@
 								</li>
 							</ol>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -42,7 +39,6 @@
     Banner Ends Here
     **********************************
 	-->
-
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
 		<div class="search-body">
 			<form class="row" #searchForm="ngForm" (ngSubmit)="searchData(searchForm)">
@@ -77,11 +73,9 @@
 					<input type="submit" value="Search" class="btn btn-block" style="padding:10px;background-color:#5e618b;color: #ece6e6;
 					font-size: 1.5em;">
 				</div>
-
 			</form>
 		</div>
 	</div>
-
 
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
 		<div class="row">
@@ -133,8 +127,7 @@
 									<em>{{user.review_count}} Reviews</em>
 								</div>
 								<a href="javascript:void(0);" class="listar-category">
-									<i class="icon-nightlife"></i>
-
+									<i class="fa fa-bell" aria-hidden="true"></i>
 								</a>
 							</div>
 							<div class="listar-themepostfoot">
@@ -146,7 +139,6 @@
 									<a class="listar-btnquickinfo" href="#" data-toggle="modal" data-target=".listar-placequickview">
 										<i class="icon-expand"></i>
 									</a>
-
 									<a class="listar-btnquickinfo" href="javascript:void(0);">
 										<i class="icon-heart2"></i>
 									</a>
@@ -171,102 +163,11 @@
 						</div>
 					</figure>
 				</div>
-
 				<nav class="listar-pagination">
 					<pagination-controls (pageChange)="p=$event"></pagination-controls>
-
 				</nav>
 			</div>
 		</div>
 	</div>
 </main>
-<!--************************************
-				Main End
-		*************************************-->
 
-<!--************************************
-			Theme Modal Box Start
-	*************************************-->
-<div class="modal fade listar-placequickview" tabindex="-1" role="dialog">
-	<div class="modal-dialog listar-modaldialog" role="document">
-		<div class="modal-content listar-modalcontent">
-			<div class="listar-themepost listar-placespost">
-				<span class="listar-btnclosequickview" data-toggle="modal" data-target=".listar-placequickview">X</span>
-				<figure class="listar-featuredimg" data-vide-bg="poster: assets/images/post/img-18.jpg" data-vide-options="position: 50% 50%">
-					<span class="listar-contactnumber">
-						<i class="icon-">
-							<img src="assets/images/icons/icon-03.png" alt="image description">
-						</i>
-						<em> + 7890 456 133</em>
-					</span>
-				</figure>
-				<div class="listar-postcontent">
-					<h3>
-						<a href="javascript:void(0);">Serena Hotel</a>
-						<i class="icon-checkmark listar-postverified listar-themetooltip" data-toggle="tooltip" data-placement="top" title="Verified"></i>
-					</h3>
-					<div class="listar-description">
-						<p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque.
-							Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit Nam in mauris quis libero sodales eleifend amet
-							rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus</p>
-					</div>
-					<ul class="listar-listfeatures">
-						<li>Pets allowed</li>
-						<li>Kitchen</li>
-						<li>Internet</li>
-						<li>Suitable for events</li>
-						<li>Gym</li>
-						<li>Dryer</li>
-						<li>Hot tub</li>
-						<li>Family/kid friendly</li>
-						<li>Wireless Internet</li>
-					</ul>
-					<div class="listar-reviewcategory">
-						<div class="listar-review">
-							<span class="listar-stars">
-								<span></span>
-							</span>
-							<em>(3 Review)</em>
-						</div>
-						<a href="javascript:void(0);" class="listar-category">
-							<i class="icon-tourism"></i>
-							<span>Hotel</span>
-						</a>
-					</div>
-					<div class="listar-themepostfoot">
-						<span class="listar-openinghours">
-							<i class="icon-alarmclock2"></i>
-							<em>Today
-								<span class="listar-greenthemecolor">Open Now</span> 10:00 AM - 5:00 PM</em>
-						</span>
-						<div class="listar-postbtns">
-							<a class="listar-btnquickinfo listar-liked" href="javascript:void(0);">
-								<i class="icon-heart2"></i>
-							</a>
-							<div class="listar-btnquickinfo">
-								<div class="listar-shareicons">
-									<a href="javascript:void(0);">
-										<i class="fa fa-twitter"></i>
-									</a>
-									<a href="javascript:void(0);">
-										<i class="fa fa-facebook"></i>
-									</a>
-									<a href="javascript:void(0);">
-										<i class="fa fa-pinterest-p"></i>
-									</a>
-								</div>
-								<a class="listar-btnshare" href="javascript:void(0);">
-									<i class="icon-share3"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!--************************************
-			Theme Modal Box End
-	*************************************-->
-	

@@ -22,7 +22,6 @@
                 </li>
               </ol>
             </div>
-
           </div>
         </div>
       </div>
@@ -60,7 +59,6 @@
           <div class="form-group">
             <input type="text" name="categories" class="form-control" id="categories" placeholder="Enter categories" ngModel> </div>
         </div>
-
         <div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
           <div class="form-group">
             <select class="form-control" id="exampleSelect1" ngValue="op1" (change)="getValue($event.target.value)">
@@ -73,7 +71,6 @@
         <div class="container-2">
           <input type="submit" value="Search" class="btn btn-block" style="padding:10px;background-color:#5e618b">
         </div>
-
       </form>
     </div>
   </div>
@@ -83,7 +80,6 @@
       <fieldset>
         <div class="listar-select">
           Order By:
-
           <div class="btn btn-primary" (click)="sort('stars')" style="margin-right:3px;background-color: #5e618b; font-size:1em; color:white">
             Ratings
           </div>
@@ -93,8 +89,6 @@
         </div>
         <div class="listar-rightbox">
           <ul class="listar-views">
-            <!--	<li><a href="listingv2.html"><i class="icon-grid"></i></a></li>
-                      <li class="listar-active"><a href="listingvlist.html"><i class="icon-icons152"></i></a></li>-->
             <li class="listar-active">
               <a routerLink="../listvlist">
                 <i class="fa fa-list"></i>
@@ -111,20 +105,17 @@
 
       <div *ngFor="let user of users|orderBy:key:reverse|filter:filter|paginate:{itemsPerPage:6,currentPage:p}" class="listar-themepost listar-placespost"
         style="height:200px">
-
         <figure class="listar-featuredimg">
           <a routerLink="/details/{{user.business_id}}">
             <img src="assets/images/list/{{user.Images}}" alt="image description" class="mCS_img_loaded">
           </a>
         </figure>
-
         <div class="listar-postcontent">
           <h3>
             <a routerLink="/details/{{user.business_id}}">{{user.name}}</a>
           </h3>
-          <div class="listar-description">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod Aenean sollicitudin it
-              conseibh id elit</p>
+          <div class="listar-description" style="font-size:1.6em;">
+            <p>You will get in touch with {{user.categories}} with required service</p>
           </div>
           <div class="listar-reviewcategory">
             <div class="listar-review">
@@ -134,7 +125,7 @@
               <em>{{user.review_count}} reviews</em>
             </div>
             <a href="javascript:void(0);" class="listar-category">
-              <i class="icon-nightlife"></i>
+              <i class="fa fa-bell" aria-hidden="true"></i>
               <span>{{user.categories}}</span>
             </a>
           </div>
@@ -144,7 +135,6 @@
               <em>{{user.city}}</em>
             </a>
             <div class="listar-postbtns">
-
               <a class="listar-btnquickinfo" href="#" data-toggle="modal" data-target=".listar-placequickview">
                 <i class="icon-expand"></i>
               </a>
@@ -172,98 +162,8 @@
         </div>
       </div>
       <nav class="listar-pagination">
-
         <pagination-controls (pageChange)="p=$event"></pagination-controls>
-
       </nav>
-
     </div>
   </div>
 </main>
-<!--************************************
-      Theme Modal Box Starts
-  *************************************-->
-
-<div class="modal fade listar-placequickview" tabindex="-1" role="dialog">
-  <div class="modal-dialog listar-modaldialog" role="document">
-    <div class="modal-content listar-modalcontent">
-      <div class="listar-themepost listar-placespost">
-        <span class="listar-btnclosequickview" data-toggle="modal" data-target=".listar-placequickview">X</span>
-        <figure class="listar-featuredimg" data-vide-bg="poster: assets/images/post/img-18.jpg" data-vide-options="position: 50% 50%">
-          <span class="listar-contactnumber">
-            <i class="icon-">
-              <img src="assets/images/icons/icon-03.png" alt="image description">
-            </i>
-            <em> + 7890 456 133</em>
-          </span>
-        </figure>
-        <div class="listar-postcontent">
-          <h3>
-            <a href="javascript:void(0);">Serena Hotel</a>
-            <i class="icon-checkmark listar-postverified listar-themetooltip" data-toggle="tooltip" data-placement="top"
-              title="Verified"></i>
-          </h3>
-          <div class="listar-description">
-            <p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus
-              neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit Nam in mauris quis libero sodales
-              eleifend amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus</p>
-          </div>
-          <ul class="listar-listfeatures">
-            <li>Pets allowed</li>
-            <li>Kitchen</li>
-            <li>Internet</li>
-            <li>Suitable for events</li>
-            <li>Gym</li>
-            <li>Dryer</li>
-            <li>Hot tub</li>
-            <li>Family/kid friendly</li>
-            <li>Wireless Internet</li>
-          </ul>
-          <div class="listar-reviewcategory">
-            <div class="listar-review">
-              <span class="listar-stars">
-                <span></span>
-              </span>
-              <em>(3 Review)</em>
-            </div>
-            <a href="javascript:void(0);" class="listar-category">
-              <i class="icon-tourism"></i>
-              <span>Hotel</span>
-            </a>
-          </div>
-          <div class="listar-themepostfoot">
-            <span class="listar-openinghours">
-              <i class="icon-alarmclock2"></i>
-              <em>Today
-                <span class="listar-greenthemecolor">Open Now</span> 10:00 AM - 5:00 PM</em>
-            </span>
-            <div class="listar-postbtns">
-              <a class="listar-btnquickinfo listar-liked" href="javascript:void(0);">
-                <i class="icon-heart2"></i>
-              </a>
-              <div class="listar-btnquickinfo">
-                <div class="listar-shareicons">
-                  <a href="javascript:void(0);">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                  <a href="javascript:void(0);">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a href="javascript:void(0);">
-                    <i class="fa fa-pinterest-p"></i>
-                  </a>
-                </div>
-                <a class="listar-btnshare" href="javascript:void(0);">
-                  <i class="icon-share3"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--************************************
-      Theme Modal Box End
-  *************************************-->
