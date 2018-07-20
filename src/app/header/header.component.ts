@@ -34,14 +34,15 @@ export class HeaderComponent implements OnInit {
       console.log(this.username);
     }
   }
-
+  //open modal on submit when user not registered
   openModal() {
     this.display = 'block';
   }
+  //close modal when close button is clicked
   closeModal() {
     this.display = 'none';
   }
-
+  
   //register method to user registration
   register(form: NgForm) {
     this.data = form.value.username + " " + form.value.emailaddress + " " + form.value.password;
