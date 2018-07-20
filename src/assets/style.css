@@ -2171,14 +2171,14 @@ body.listar-hidescroll{overflow: hidden;}
 .listar-reviewcategory{
 	width: 100%;
 	float: left;
-	padding: 0 0 30px;
+	padding: 0 0 10px;	
 }
 .listar-review{
 	float: left;
-	color: #5c5c5c;
 	padding: 3px 0;
 	font-size: 12px;
 	line-height: 14px;
+	color:#5e618b
 }
 .listar-review span,
 .listar-review em{
@@ -4281,7 +4281,7 @@ body.listar-hidescroll{overflow: hidden;}
 .listar-formreviewarea{
 	width: 60%;
 	float: left;
-	padding: 100px 0 0;
+	padding: 10px 0 0;
 }
 .listar-formreviewarea h3{
 	margin: 0 0 40px;

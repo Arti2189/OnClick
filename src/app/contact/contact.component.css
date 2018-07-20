@@ -1,0 +1,12 @@
+.modal-content{
+    border:1px solid #fafafd;
+    box-shadow:10px 10px 20px #0ebef0;
+    font-size:1.5em;
+}
+
+.btn2{
+    background-color:#565cb0;
+    width:50px;
+    height:30px;
+    color:#fff;
+}

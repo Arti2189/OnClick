@@ -1,107 +1,123 @@
 <main id="listar-main" class="listar-main listar-haslayout">
   <div class="container animated fadeIn">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div id="listar-content" class="listar-content">
-          <div class="listar-contactusarea">
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 pull-left">
-              <div class="row">
-                <form class="listar-formtheme listar-formcontactus" #contactForm="ngForm" (ngSubmit)="insertContact(contactForm)" ngNativeValidate>
-                  <fieldset>
-                    <h2>Contact Form</h2>
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <div class="form-group form-field">
-                          <input type="text" name="yourName" class="form-control form-field" placeholder="Your Name" [(ngModel)]="yourName" class="form-control"
-                            required />
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <div class="form-group form-field">
-                          <input type="email" name="Email" class="form-control form-field" placeholder="Email Address" [(ngModel)]="Email" class="form-control"
-                            required />
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group form-field">
-                          <input type="text" name="Subject" class="form-control form-field" placeholder="Subject" [(ngModel)]="Subject" class="form-control"
-                            required />
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="form-group form-field">
-                          <textarea class="form-control form-field" name="Message" placeholder="Message" [(ngModel)]="Message" class="form-control"
-                            required></textarea>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-field">
-                        <button class="listar-btn listar-btngreen form-field" type="submit">Send Message</button>
-                      </div>
+      <div class="listar-contactusarea">
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 pull-left">
+          <div class="row">
+            <form class="listar-formtheme listar-formcontactus" #contactForm="ngForm" (ngSubmit)="insertContact(contactForm)" ngNativeValidate>
+              <fieldset>
+                <h2>Contact Form</h2>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group form-field">
+                      <input type="text" name="yourName" class="form-control form-field" placeholder="Your Name" [(ngModel)]="yourName" class="form-control"
+                        required />
                     </div>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 pull-right">
-              <div class="row">
-                <div class="listar-contactinfo">
-                  <h2>Get in Touch</h2>
-                  <div class="listar-description">
-                    <p style="font-size:14px;">Let's Find Something Awesome Together, Drop us a line, or give us a heads up if you're intersted in visiting
-                      us.</p>
                   </div>
-                  <ul class="listar-contactinfolist">
-                    <li>
-                      <i class="icon-">
-                        <img src="assets/images/icons/icon-03.png" alt="image description">
-                      </i>
-                      <span>9425442189</span>
-                    </li>
-                    <li>
-                      <i class="icon-icons208"></i>
-                      <span>
-                        <a href="">artidhanotiya2189@gmail.com</a>
-                      </span>
-                    </li>
-                    <li>
-                      <i class="icon-world"></i>
-                      <span>
-                        <a href="www.listingstar.html" target="_blank">artidhanotiya2189@gmail.com</a>
-                      </span>
-                    </li>
-                    <li>
-                      <i class="icon-icons74"></i>
-                      <span>LTI Mahape, Navi Mumbai</span>
-                    </li>
-                  </ul>
-                  <ul class="listar-socialicons listar-socialiconsborder">
-                    <li class="listar-facebook">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li class="listar-twitter">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li class="listar-googleplus">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-google-plus"></i>
-                      </a>
-                    </li>
-                    <li class="listar-linkedin">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-linkedin"></i>
-                      </a>
-                    </li>
-                    <li class="listar-instagram">
-                      <a href="javascript:void(0);">
-                        <i class="fa fa-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group form-field">
+                      <input type="email" name="Email" class="form-control form-field" placeholder="Email Address" [(ngModel)]="Email" class="form-control"
+                        required />
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group form-field">
+                      <input type="text" name="Subject" class="form-control form-field" placeholder="Subject" [(ngModel)]="Subject" class="form-control"
+                        required />
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group form-field">
+                      <textarea class="form-control form-field" name="Message" placeholder="Message" [(ngModel)]="Message" class="form-control"
+                        required></textarea>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-field">
+                    <button class="listar-btn listar-btngreen form-field" type="submit">Send Message</button>
+                  </div>
                 </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 pull-right">
+          <div class="row">
+            <div class="listar-contactinfo">
+              <h2>Get in Touch</h2>
+              <div class="listar-description">
+                <p style="font-size:14px;">Let's Find Something Awesome Together, Drop us a line, or give us a heads up if you're intersted in visiting
+                  us.
+                </p>
+              </div>
+              <ul class="listar-contactinfolist">
+                <li>
+                  <i class="icon-">
+                    <img src="assets/images/icons/icon-03.png" alt="image description">
+                  </i>
+                  <span>9425442189</span>
+                </li>
+                <li>
+                  <i class="icon-icons208"></i>
+                  <span>
+                    <a href="#">artidhanotiya2189@gmail.com</a>
+                  </span>
+                </li>
+                <li>
+                  <i class="icon-world"></i>
+                  <span>
+                    <a href="#" target="_blank">artidhanotiya2189@gmail.com</a>
+                  </span>
+                </li>
+                <li>
+                  <i class="icon-icons74"></i>
+                  <span>LTI Mahape, Navi Mumbai</span>
+                </li>
+              </ul>
+              <ul class="listar-socialicons listar-socialiconsborder">
+                <li class="listar-facebook">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="listar-twitter">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="listar-googleplus">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+                <li class="listar-linkedin">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="listar-instagram">
+                  <a href="javascript:void(0);">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div id="listar-content" class="listar-content">
+      <div class="modal" [ngStyle]="{'display':display}">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div>
+                <p>Your Query is Submitted.</p>
+                <p> We will Respond you Soon.</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn2" (click)="closeModal()">Close</button>
               </div>
             </div>
           </div>

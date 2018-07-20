@@ -1,109 +1,149 @@
-  <header id="listar-header" class="listar-header listar-fixedheader listar-haslayout">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <strong class="listar-logo"><a href="index-2.html"><img src="assets/images/logod.png" alt="company logo here"></a></strong>
-          <nav class="listar-addnav">
+<header id="listar-header" class="listar-header listar-fixedheader listar-haslayout">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <strong class="listar-logo">
+          <a href="index-2.html">
+            <img src="assets/images/logo1.png" alt="company logo here">
+          </a>
+        </strong>
+        <nav class="listar-addnav">
+          <ul>
+            <li>
+              <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="#listar-loginsingup">
+                <i class="icon-smiling-face"></i>
+                <span *ngIf="!isLoggedIn" >Join Now</span>
+                <span *ngIf="isLoggedIn">{{username}}</span>
+                <span *ngIf="isLoggedIn" (click)='logout()'>Logout</span>
+                
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav id="listar-nav" class="listar-nav">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#listar-navigation" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="listar-navigation" class="collapse navbar-collapse listar-navigation">
             <ul>
               <li>
-                <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="#listar-loginsingup">
-                  <i class="icon-smiling-face"></i>
-                  <span>Join Now</span>
-                </a>
+                <a routerLink="banner" href="#listar-homebannervthree">Home</a>
               </li>
-              
+              <li>
+                <a routerLink="listvlist">Explore</a>
+              </li>
+              <li>
+                <a href="#categories">Categories</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a routerLink="blog">Blog</a>
+              </li>
+              <li>
+                <a routerLink="contactus">Contact Us</a>
+              </li>
             </ul>
-          </nav>
-          <nav id="listar-nav" class="listar-nav">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#listar-navigation" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div id="listar-navigation" class="collapse navbar-collapse listar-navigation">
-              <ul>
-                <li><a routerLink="banner" href="#listar-homebannervthree">Home</a></li>
-                <li><a routerLink="listvlist">Explore</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a routerLink="blog">Blog</a></li> 
-                <li><a routerLink="contactus">Contact Us</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
     </div>
-  </header>
-  
-  <!--************************************
+  </div>
+</header>
+<!--************************************
       Login Singup Start
   *************************************-->
- <div id="listar-loginsingup" class="listar-loginsingup">
-    <button type="button" class="listar-btnclose">x</button>
-    <figure class="listar-loginsingupimg" data-vide-bg="poster: images/bgjoin.jpg" data-vide-options="position: 50% 50%"></figure>
-    <div class="listar-contentarea">
-      <div class="listar-themescrollbar">
-        <div class="listar-logincontent">
-          <div class="listar-themetabs">
-            <ul class="listar-tabnavloginregistered" role="tablist">
-              <li role="presentation" class="active"><a href="#listar-loging" data-toggle="tab">Log in</a></li>
-              <li role="presentation"><a href="#listar-register" data-toggle="tab">Register</a></li>
-            </ul>
-            <div class="tab-content listar-tabcontentloginregistered">
-              <div role="tabpanel" class="tab-pane active " id="listar-loging">
-                <form class="listar-formtheme listar-formlogin" #searchUser="ngForm" (ngSubmit)="login(searchUser)" ngNativeValidate>
-                  <fieldset>
-                    <div class="form-group listar-inputwithicon">
-                      <i class="icon-profile-male"></i>
-                      <input type="text" name="username" class="form-control form-field" placeholder="Username Or Email" ngModel >
-                    </div>
-                    <div class="form-group listar-inputwithicon">
-                      <i class="icon-icons208"></i>
-                      <input type="password" name="password" class="form-control form-field" placeholder="Password" ngModel>
-                    </div>
-                    <input type="submit" class="listar-btn listar-btngreen" >
-                  </fieldset>
-                </form>
-              </div>
-              <div role="tabpanel" class="tab-pane" id="listar-register" >
-                <form class="listar-formtheme listar-formlogin" #registerForm="ngForm"  (ngSubmit)="register(registerForm)" ngNativeValidate> 
-                  <fieldset>
-                    <div class="form-group listar-inputwithicon">
-                      <i class="icon-profile-male"></i>
-                      <input type="text" name="username" class="form-control form-field" placeholder="Username"  [(ngModel)]="username"  required>
-                    </div>
-                    <div class="form-group listar-inputwithicon">
-                      <i class="icon-icons208"></i>
-                      <input type="email" name="emailaddress" class="form-control form-field" placeholder="Email Address" [(ngModel)]="emailaddress"  required>
-                    </div>
-                    <div class="form-group listar-inputwithicon">
-                      <i class="icon-lock-stripes"></i>
-                      <input type="password" name="password" class="form-control form-field" placeholder="Password" [(ngModel)]="password"  required>
-                    </div>
-                    <div class="form-group listar-inputwithicon">
-                      <i class="icon-lock-stripes"></i>
-                      <input type="password" name="confirmpassword" class="form-control form-field" placeholder="Password" [(ngModel)]="confirmpassword"  required>
-                    </div>
-                    <button class="listar-btn listar-btngreen" type="submit">Register</button>
-                  </fieldset>
-                </form>
-              </div>
+<div id="listar-loginsingup" class="listar-loginsingup">
+  <button type="button" class="listar-btnclose">x</button>
+  <figure class="listar-loginsingupimg" data-vide-bg="poster: images/bgjoin.jpg" data-vide-options="position: 50% 50%"></figure>
+  <div class="listar-contentarea">
+    <div class="listar-themescrollbar">
+      <div class="listar-logincontent">
+        <div class="listar-themetabs">
+          <ul class="listar-tabnavloginregistered" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#listar-loging" data-toggle="tab">Log in</a>
+            </li>
+            <li role="presentation">
+              <a href="#listar-register" data-toggle="tab">Register</a>
+            </li>
+          </ul>
+          <div class="tab-content listar-tabcontentloginregistered">
+            <div role="tabpanel" class="tab-pane active " id="listar-loging">
+              <form class="listar-formtheme listar-formlogin" #searchUser="ngForm" (ngSubmit)="login(searchUser)" ngNativeValidate>
+                <fieldset>
+                  <div class="form-group listar-inputwithicon">
+                    <i class="icon-profile-male"></i>
+                    <input type="text" name="username" class="form-control form-field" placeholder="Username Or Email" ngModel>
+                  </div>
+                  <div class="form-group listar-inputwithicon">
+                    <i class="icon-icons208"></i>
+                    <input type="password" name="password" class="form-control form-field" placeholder="Password" ngModel>
+                  </div>
+                  <input type="submit" class="listar-btn listar-btngreen">
+                </fieldset>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="listar-register">
+              <form class="listar-formtheme listar-formlogin" #registerForm="ngForm" (ngSubmit)="register(registerForm)" ngNativeValidate>
+                <fieldset>
+                  <div class="form-group listar-inputwithicon">
+                    <i class="icon-profile-male"></i>
+                    <input type="text" name="username" class="form-control form-field" placeholder="Username" [(ngModel)]="username" required>
+                  </div>
+                  <div class="form-group listar-inputwithicon">
+                    <i class="icon-icons208"></i>
+                    <input type="email" name="emailaddress" class="form-control form-field" placeholder="Email Address" [(ngModel)]="emailaddress"
+                      required>
+                  </div>
+                  <div class="form-group listar-inputwithicon">
+                    <i class="icon-lock-stripes"></i>
+                    <input type="password" name="password" class="form-control form-field" placeholder="Password" [(ngModel)]="password" required>
+                  </div>
+                  <div class="form-group listar-inputwithicon">
+                    <i class="icon-lock-stripes"></i>
+                    <input type="password" name="confirmpassword" class="form-control form-field" placeholder="Password" [(ngModel)]="confirmpassword"
+                      required>
+                  </div>
+                  <button class="listar-btn listar-btngreen" type="submit">Register</button>
+                </fieldset>
+              </form>
             </div>
           </div>
-          <div class="listar-shareor"><span>or</span></div>
-          <div class="listar-signupwith">
-            <h2>Sign in With...</h2>
-            <ul class="listar-signinloginwithsocialaccount">
-              <li class="listar-facebook"><a href="javascript:void(0);"><i class="icon-facebook-1"></i><span>Facebook</span></a></li>
-              <li class="listar-twitter"><a href="javascript:void(0);"><i class="icon-twitter-1"></i><span>Twitter</span></a></li>
-              <li class="listar-googleplus"><a href="javascript:void(0);"><i class="icon-google4"></i><span>Google +</span></a></li>
-            </ul>
-          </div>
+        </div>
+        <div class="listar-shareor">
+          <span>or</span>
+        </div>
+        <div class="listar-signupwith">
+          <h2>Sign in With...</h2>
+          <ul class="listar-signinloginwithsocialaccount">
+            <li class="listar-facebook">
+              <a href="javascript:void(0);">
+                <i class="icon-facebook-1"></i>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="listar-twitter">
+              <a href="javascript:void(0);">
+                <i class="icon-twitter-1"></i>
+                <span>Twitter</span>
+              </a>
+            </li>
+            <li class="listar-googleplus">
+              <a href="javascript:void(0);">
+                <i class="icon-google4"></i>
+                <span>Google +</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</div>

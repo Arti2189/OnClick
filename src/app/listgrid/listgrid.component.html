@@ -1,9 +1,9 @@
 <main id="listar-main" class="listar-main listar-haslayout">
-<!-- 
+	<!-- 
      ***************************
      Banner Starts Here
       *****************************
-  -->
+    -->
 	<div class="listar-listingbanner">
 		<div class="listar-parallaxcolor listar-innerbannerparallaxcolor">
 			<div class="container">
@@ -45,21 +45,24 @@
 				<div class="col-xs-12 col-md-6 col-lg-1"></div>
 				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
 					<div class="form-group">
-						<input type="text" name="keyword" class="form-control" id="Keyword" placeholder="Enter Keyword" ngModel> </div>
+						<input type="text" name="keyword" class="form-control" id="Keyword" placeholder="Enter Keyword" ngModel>
+					</div>
 				</div>
 				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
 					<div class="form-group">
-						<input type="text" name="state" class="form-control" id="state" placeholder="Enter State" ngModel> </div>
+						<input type="text" name="state" class="form-control" id="state" placeholder="Enter State" ngModel>
+					</div>
 				</div>
 				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
 					<div class="form-group">
-						<input type="text" name="city" class="form-control" id="city" placeholder="Enter City" ngModel> </div>
+						<input type="text" name="city" class="form-control" id="city" placeholder="Enter City" ngModel>
+					</div>
 				</div>
 				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
 					<div class="form-group">
-						<input type="text" name="categories" class="form-control" id="categories" placeholder="Enter categories" ngModel> </div>
+						<input type="text" name="categories" class="form-control" id="categories" placeholder="Enter categories" ngModel>
+					</div>
 				</div>
-
 				<div class="col-xs-12 col-md-6 col-lg-2" style="margin-left:5px;margin-right: 5px">
 					<div class="form-group">
 						<select class="form-control" id="exampleSelect1" ngValue="op1" (change)="getValue($event.target.value)">
@@ -76,15 +79,12 @@
 			</form>
 		</div>
 	</div>
-
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
 		<div class="row">
 			<div class="listar-themeposts listar-placesposts listar-gridview">
 				<fieldset>
-
 					<div class="listar-select">
 						Order By:
-
 						<div class="btn" (click)="sort('stars')" style="margin-right:3px;background-color: #5e618b; font-size:1em; color:white">
 							Ratings
 						</div>
@@ -94,7 +94,6 @@
 					</div>
 					<div class="listar-rightbox">
 						<ul class="listar-views">
-
 							<li>
 								<a routerLink="../listvlist">
 									<i class="fa fa-list"></i>
@@ -107,24 +106,60 @@
 							</li>
 						</ul>
 					</div>
-
 				</fieldset>
-
 				<div *ngFor="let user of users|orderBy:key:reverse|filter:filter|paginate:{itemsPerPage:12,currentPage:p}" class="listar-themepost listar-placespost">
 					<figure class="listar-featuredimg">
 						<a routerLink="/details/{{user.business_id}}">
 							<img src="assets/images/list/{{user.Images}}" alt="image description">
 						</a>
 						<div class="listar-postcontent">
-							<h3>
+							<h3 style="font-weight:bold;">
 								<a routerLink="/details/{{user.business_id}}">{{user.name}}</a>
 							</h3>
 							<div class="listar-reviewcategory">
 								<div class="listar-review">
-									<span class="listar-stars">
-										<span></span>
-									</span>
-									<em>{{user.review_count}} Reviews</em>
+									<div class="ratings" id="rating5" *ngIf="user.stars==5">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</div>
+									<div class="ratings" id="rating4-5" *ngIf="user.stars>=4 && user.stars<5">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+									</div>
+									<div class="ratings" id="rating3-4" *ngIf="user.stars>=3 && user.stars<4">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+									</div>
+									<div class="ratings" id="rating2-3" *ngIf="user.stars>=2 && user.stars<3">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+									</div>
+									<div class="ratings" id="rating1-2" *ngIf="user.stars>=1 && user.stars<2">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+									</div>
+									<div class="ratings" id="rating0-1" *ngIf="user.stars>=0 && user.stars<1">
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+									</div>
 								</div>
 								<a href="javascript:void(0);" class="listar-category">
 									<i class="fa fa-bell" aria-hidden="true"></i>
@@ -133,31 +168,13 @@
 							<div class="listar-themepostfoot">
 								<a class="listar-location" href="javascript:void(0);">
 									<i class="icon-icons74"></i>
-									<em>{{user.city}}</em>
+									<em style="font-size:15px;font-weight:bold">{{user.city}}</em>
 								</a>
 								<div class="listar-postbtns">
-									<a class="listar-btnquickinfo" href="#" data-toggle="modal" data-target=".listar-placequickview">
-										<i class="icon-expand"></i>
-									</a>
+									<em style="font-size:15px;font-weight:bold;color:#5c5c5c">{{user.review_count}} Reviews</em>
 									<a class="listar-btnquickinfo" href="javascript:void(0);">
 										<i class="icon-heart2"></i>
 									</a>
-									<div class="listar-btnquickinfo">
-										<div class="listar-shareicons">
-											<a href="javascript:void(0);">
-												<i class="fa fa-twitter"></i>
-											</a>
-											<a href="javascript:void(0);">
-												<i class="fa fa-facebook"></i>
-											</a>
-											<a href="javascript:void(0);">
-												<i class="fa fa-pinterest-p"></i>
-											</a>
-										</div>
-										<a class="listar-btnshare" href="javascript:void(0);">
-											<i class="icon-share3"></i>
-										</a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -170,4 +187,3 @@
 		</div>
 	</div>
 </main>
-

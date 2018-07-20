@@ -1,5 +1,5 @@
 import {Routes,RouterModule} from '@angular/router';
-
+//import components
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
