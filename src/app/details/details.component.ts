@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user.service';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -8,21 +8,18 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-      detail=[];
-     
-      private uid:string;
-  constructor(private activateRouter:ActivatedRoute,private userService:UserService) {
+  detail = [];
+  private uid: string;
+  // avticated router is used for cross browser communication
+  constructor(private activateRouter: ActivatedRoute, private userService: UserService) {
     let object = this;
     object.uid = this.activateRouter.snapshot.paramMap.get('id');
-    console.log("heee ram");
-  
-   }
-
-  ngOnInit() 
-  { this.userService.getDetails(this.uid)
-    .subscribe(data=>{
-      this.detail=data;
+  }
+  //called on after ngOnChange and bring data from databases
+  ngOnInit() {
+    this.userService.getDetails(this.uid)
+    .subscribe(data => {
+      this.detail = data;
     })
   }
-  
 }

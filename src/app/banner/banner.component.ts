@@ -6,10 +6,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit() {
   }
-
 }
