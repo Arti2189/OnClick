@@ -29,7 +29,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-push-1 col-md-10 col-lg-push-1 col-lg-10">
             <div id="listar-detailcontent" class="listar-detailcontent">
-              <section class="listar-comments">
+              <section *ngFor="let rev of review" class="listar-comments"  >
                 <ul id="listar-comments" class="listar-comments">
                   <li>
                     <div class="listar-comment">
@@ -39,13 +39,13 @@
                       <div class="listar-content">
                         <div class="listar-commenthead">
                           <div class="listar-author">
-                            <h3>{{review[0].name}}</h3>
-                            <time datetime="2017-12-12">{{review.Category}}</time>
+                            <h3>{{rev.yourName}}</h3>
+                            <time datetime="2017-12-12">{{rev.Category}}</time>
                           </div>
                           <a class="listar-reply" href="#review">reply</a>
                         </div>
                         <div class="listar-description">
-                          <p>{{review.Message}}</p>
+                          <p>{{rev.Message}}</p>
                         </div>
                       </div>
                     </div>

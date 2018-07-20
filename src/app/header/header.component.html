@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <strong class="listar-logo">
-          <a href="index-2.html">
+          <a routerLink="../banner">
             <img src="assets/images/logo1.png" alt="company logo here">
           </a>
         </strong>
@@ -56,6 +56,21 @@
     </div>
   </div>
 </header>
+<div class="modal" [ngStyle]="{'display':display}">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div>
+            <p>Not a valid user</p>
+            
+          </div>
+          <div class="modal-footer">
+            <button class="btn2" (click)="closeModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!--************************************
       Login Singup Start
   *************************************-->

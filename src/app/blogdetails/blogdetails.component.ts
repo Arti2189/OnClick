@@ -31,6 +31,7 @@ export class BlogdetailsComponent implements OnInit {
       .subscribe(data => {
         console.log(data);
         this.review = data;
+        console.log(this.review)
       });
   }
 

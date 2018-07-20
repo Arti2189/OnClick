@@ -34,7 +34,7 @@ export class UserService {
   }
   /************************** Get Reviews  ***********************/
   getReviews() {
-    return this.http.get<any>(this.baseUrl+"/getreviews/pages");
+    return this.http.get<any>(this.baseUrl+"getreviews/pages");
   }
 
   //without sorting---------------------------------------------------------

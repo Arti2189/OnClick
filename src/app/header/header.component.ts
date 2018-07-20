@@ -19,20 +19,26 @@ export class HeaderComponent implements OnInit {
   password: string = "";
   confirmpassword: string = "";
   searchUser = [];
-  isLoggedIn:boolean;
-
+  isLoggedIn: boolean;
+  display: string = "";
   //constructor to declare services
-  constructor(private userService: UserService, ) { 
-    if(localStorage.getItem('user')==null)   
-    this.isLoggedIn=false;
-    else{
-    this.isLoggedIn=true;
-    console.log(localStorage.getItem('user'));
-  this.username=localStorage.getItem('user');
-  console.log(this.username);  
-  }
+  constructor(private userService: UserService, ) {
+    if (localStorage.getItem('user') == null)
+      this.isLoggedIn = false;
+    else {
+      this.isLoggedIn = true;
+      console.log(localStorage.getItem('user'));
+      this.username = localStorage.getItem('user');
+      console.log(this.username);
+    }
   }
 
+  openModal() {
+    this.display = 'block';
+  }
+  closeModal() {
+    this.display = 'none';
+  }
   //register method to user registration
   register(form: NgForm) {
     this.data = form.value.username + " " + form.value.emailaddress + " " + form.value.password + " " + form.value.confirmpassword;
@@ -49,15 +55,16 @@ export class HeaderComponent implements OnInit {
         this.emailaddress = "";
         this.password = "";
         this.confirmpassword = "";
-
-         //put some validation 
-         let username:string
-         localStorage.setItem('user',"Arti");
-         this.username="Arti";//please update are 
-         this.isLoggedIn=true 
+        //put some validation 
+        let username: string
+        // localStorage.setItem('user',"Arti");
+        localStorage.setItem('user', this.username);
+        // this.username="Arti";//please update are 
+        this.username = 'user';
+        this.isLoggedIn = true
       })
   }
-  
+
   // login method for loging user into application
   login(form: NgForm) {
     this.username = form.value.username;
@@ -65,27 +72,27 @@ export class HeaderComponent implements OnInit {
     if (this.username != "" && this.password != "") {
       this.userService.loginUser(this.username, this.password)
         .subscribe(data => {
-          this.searchUser = data;
-       console.log('hello');
-       //if success
-        let username:string
-        localStorage.setItem('user',"Arti");
-         this.username="Arti";
-         this.isLoggedIn=true      
-       
+          // this.searchUser = data;
+          //if success 
+          // let username:string
+          if (data.length == 0) {
+            this.display = 'block';
+          }
+          else {
+            // localStorage.setItem('user',"Arti");
+            localStorage.setItem('user', this.username);
+            //this.username="Arti";
+            this.isLoggedIn = true
+          }
         });
     }
   }
-
-
-
-  logout(){
-    this.username="";
+  logout() {
+    this.username = "";
     console.log('hello');
-localStorage.removeItem('user');
-this.isLoggedIn=false;   
-
-//route after logout
+    localStorage.removeItem('user');
+    this.isLoggedIn = false;
+    //route after logout
   }
   ngOnInit() {
   }
