@@ -1,0 +1,24 @@
+server running on port 3001
+Directory Name: D:\yelp\express
+StartTimeStamp: Invalid DateFile Name: D:\yelp\express\searchAll.js
+Process Version: v8.9.4
+Process Time: 0.533
+Memory Use: {"rss":39481344,"heapTotal":20291584,"heapUsed":14038960,"external":18441071}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+server running on port 3001
+Directory Name: D:\yelp\express
+StartTimeStamp: Invalid DateFile Name: D:\yelp\express\searchAll.js
+Process Version: v8.9.4
+Process Time: 0.533
+Memory Use: {"rss":39481344,"heapTotal":20291584,"heapUsed":14038960,"external":18441071}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+server running on port 3001
+Directory Name: D:\yelp\express
+StartTimeStamp: Invalid DateFile Name: D:\yelp\express\searchAll.js
+Process Version: v8.9.4
+Process Time: 0.533
+Memory Use: {"rss":39481344,"heapTotal":20291584,"heapUsed":14038960,"external":18441071}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
